@@ -1,0 +1,14 @@
+---
+name: Check signed commits
+on: [pull_request, pull_request_target]
+
+jobs:
+  check-signed-commit:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out the repository code
+        uses: actions/checkout@v4.1.7
+
+      - name: Check if the commits are signed
+        uses: 1Password/check-signed-commits-action@v1
