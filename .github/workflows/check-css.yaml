@@ -1,0 +1,16 @@
+---
+name: Check CSS files
+on: [push, workflow_dispatch]
+
+jobs:
+  check-css:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout the code
+        uses: actions/checkout@v4.1.7
+
+      - name: stylelint
+        uses: actions-hub/stylelint@v1.1.6
+        env:
+          PATTERN: "**/*.css"
