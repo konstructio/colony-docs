@@ -1,0 +1,28 @@
+---
+name: Check spelling & grammar
+on: [push, workflow_dispatch]
+
+jobs:
+  check-syntax:
+    name: vale
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout this repository
+        uses: actions/checkout@v4.1.7
+
+      - name: Setup Python
+        uses: actions/setup-python@v5.1.1
+        with:
+          python-version: '3.12.4'
+
+      - name: Setup Python
+        uses: ruby/setup-ruby@v1.187.0
+        with:
+          ruby-version: '3.3.4'
+
+      - name: Validate the syntax
+        uses: errata-ai/vale-action@v2.1.0
+        with:
+          fail_on_error: true
+          version: 3.6.1
