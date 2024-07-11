@@ -6,7 +6,7 @@ export default {
       2, // level: error
       'always',
       (parsed) => {
-        parsed.header = parsed.header.replace(/\((close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) #[0-9]+\)$/, '')
+        parsed.header = parsed.header.replace(/\(#[0-9]+\)$/, '')
 
         if (parsed.header.length <= 72) {
           return [true];
