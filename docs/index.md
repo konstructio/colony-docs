@@ -12,7 +12,7 @@ To be able to run colony, you will need to be physically within your data center
 
 ### Prerequisites
 
-To be able to run colony in your data center, you will need to install the colony CLI, have Docker Desktop running on your laptop and retrive your colony API key.
+To be able to run colony in your data center, you will need to install the colony CLI, have Docker Desktop running on your laptop and retrieve your colony API key.
 
 #### colony CLI
 
