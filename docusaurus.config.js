@@ -51,7 +51,11 @@ const config = {
       // Replace with your project's social card
       //image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Colony Docs',
+        logo: {
+          alt: 'Colony Docs',
+          src: 'img/colony.svg',
+          href: 'https://colony.konstruct.io/docs',
+        },
       },
       footer: {
         style: 'dark',
