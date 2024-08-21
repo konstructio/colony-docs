@@ -36,7 +36,11 @@ export default {
   ],
   "themeConfig": {
     "navbar": {
-      "title": "Colony Docs",
+      "logo": {
+        "alt": "Colony Docs",
+        "src": "img/colony.svg",
+        "href": "https://colony.konstruct.io/docs"
+      },
       "hideOnScroll": false,
       "items": []
     },
