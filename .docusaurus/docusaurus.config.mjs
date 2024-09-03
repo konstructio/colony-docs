@@ -7,8 +7,8 @@ export default {
   "title": "Colony Documentation",
   "tagline": "Colony",
   "favicon": "img/favicon.ico",
-  "url": "https://your-docusaurus-site.example.com",
-  "baseUrl": "/",
+  "url": "https://colony.konstruct.io",
+  "baseUrl": "/docs/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
   "i18n": {
@@ -41,8 +41,20 @@ export default {
         "src": "img/colony.svg",
         "href": "https://colony.konstruct.io/docs"
       },
-      "hideOnScroll": false,
-      "items": []
+      "items": [
+        {
+          "type": "docsVersionDropdown",
+          "position": "right",
+          "dropdownItemsBefore": [],
+          "dropdownItemsAfter": []
+        },
+        {
+          "href": "https://konstruct.io/colony",
+          "label": "Website",
+          "position": "right"
+        }
+      ],
+      "hideOnScroll": false
     },
     "footer": {
       "style": "dark",

@@ -56,6 +56,17 @@ const config = {
           src: 'img/colony.svg',
           href: 'https://colony.konstruct.io/docs',
         },
+        items: [
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
+          {
+            href: 'https://konstruct.io/colony',
+            label: 'Website',
+            position: 'right',
+          }
+        ]
       },
       footer: {
         style: 'dark',
