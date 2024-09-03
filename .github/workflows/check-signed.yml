@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v4.1.7
 
       - name: Check if the commits are signed
-        uses: 1Password/check-signed-commits-action@v1
+        uses: 1Password/check-signed-commits-action@519a1dbdded076a15e1d628896a3b6beb3a9ed0b
