@@ -1,6 +1,6 @@
 apiVersion: v2
-appVersion: 48f4e96
+appVersion: a97639c
 description: colony documentation Helm chart
 name: colony-docs
 type: application
-version: 1.157.0
+version: 1.158.0
