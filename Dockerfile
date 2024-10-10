@@ -16,8 +16,6 @@ ENV NODE_ENV production
 
 COPY --from=builder /app/build/ .
 
-COPY default.conf /etc/nginx/conf.d/
-
 ENV PORT=80
 
 ENTRYPOINT ["/http-server"]
