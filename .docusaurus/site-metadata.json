@@ -21,6 +21,11 @@
       "type": "package",
       "name": "@docusaurus/theme-classic",
       "version": "3.5.2"
+    },
+    "docusaurus-theme-search-typesense": {
+      "type": "package",
+      "name": "docusaurus-theme-search-typesense",
+      "version": "0.22.0"
     }
   }
 }

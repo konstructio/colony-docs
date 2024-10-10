@@ -45,6 +45,10 @@ const config = {
     ],
   ],
 
+  themes: [
+    'docusaurus-theme-search-typesense'
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -80,6 +84,20 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+      },
+      typesense: {
+        typesenseCollectionName: 'colony',
+        typesenseServerConfig: {
+          nodes: [
+            {
+              host: 'typesense.mgmt-20.kubefirst.com',
+              port: 443,
+              protocol: 'https',
+            },
+          ],
+          apiKey: 'bXLafYINyTtPXLo8KeP1znyMUDXtwVUl',
+        },
+        contextualSearch: true,
       },
     }),
 };
