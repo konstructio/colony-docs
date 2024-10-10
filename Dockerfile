@@ -8,11 +8,13 @@ RUN npm ci
 
 COPY . .
 
+RUN npm run build
+
 FROM ghcr.io/patrickdappollonio/docker-http-server:v2.5.0
 
 WORKDIR /html
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 COPY --from=builder /app/build/ .
 
