@@ -2,14 +2,15 @@ FROM node:20-alpine3.17 AS builder
 
 WORKDIR /app
 
+COPY package*.json .
+
+RUN npm ci 
+
 COPY . .
 
-RUN npm install \
-&& npm run build
+FROM ghcr.io/patrickdappollonio/docker-http-server:v2.5.0
 
-FROM nginx:1.25.1-alpine AS runner
-
-WORKDIR /usr/share/nginx/html
+WORKDIR /html
 
 ENV NODE_ENV production
 
@@ -17,8 +18,8 @@ COPY --from=builder /app/build/ .
 
 COPY default.conf /etc/nginx/conf.d/
 
-EXPOSE 80
+ENV PORT=80
 
-ENV PORT 80
+ENTRYPOINT ["/http-server"]
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["--pathprefix=/docs/", "--disable-directory-listing", "--custom-404=404.html"]
