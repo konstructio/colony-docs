@@ -129,7 +129,7 @@ which generate
 
 ##### Tabs
 
-If you want to create tabs, it is possible with MDX syntax. To see an example of code, check the [common UI page code](https://github.com/konstructio/docs/blob/main/versioned_docs/version-2.3/common/ui.mdx) from the Kubefirst v2.3 docs. You can see the end result on the [live version of the docs page](https://kubefirst.konstruct.io/docs/civo/quick-start/install/ui#step-1-install-kubefirst-console).
+If you want to create tabs, it is possible with MDX syntax. To see an example of code, check the [common UI page code](https://github.com/konstructio/docs/blob/main/versioned_docs/version-2.3/common/ui.mdx) from the kubefirst v2.3 docs. You can see the end result on the [live version of the docs page](https://kubefirst.konstruct.io/docs/civo/quick-start/install/ui#step-1-install-kubefirst-console).
 
 It will generate the following:
 
