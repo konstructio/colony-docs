@@ -35,7 +35,7 @@ To install Docker Desktop on your machine, please follow [their instructions](ht
 
 #### colony API key
 
-To create a colony API key,first [sign-up to the colony management portal](https://colony-ui.mgmt-20.kubefirst.com/auth/signup).
+To create a colony API key,first [sign-up to the colony management portal](https://colony.konstruct.io).
 
 ![colony sign-up page](img/colony/signup.png)
 
