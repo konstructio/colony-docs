@@ -48,26 +48,22 @@
       "plugin": "plugin---docs-searche-99-e77"
     }
   },
-  "/docs/-f9f": {
+  "/docs/-9ba": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docs-aba-4f5"
     }
   },
-  "/docs/next-ea8": {
+  "/docs/next-d91": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-nextbf-1-ba7"
   },
-  "/docs/next-937": {
+  "/docs/next-918": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/next/-8b3": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-next-c-37-d91"
-  },
-  "/docs/next/clusters/-c97": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-next-clusters-6-ab-ded"
   },
   "/docs/next/install/-05c": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -84,6 +80,10 @@
   "/docs/next/templates/-85b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-next-templates-066-995"
+  },
+  "/docs/next/usage/-849": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-next-usage-38-e-7f9"
   },
   "/docs/-bf5": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",

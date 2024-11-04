@@ -34,8 +34,7 @@ If you connect to Colony and (*in the UI*) nothing appears after a minute or two
 
 You should see something like this
 
-![Colony new data center](./img/colony/newdatacenter.png)
-
+![Colony new data center](./img/usage/newdatacenter.png)
 
 
 ## Creating Clusters
