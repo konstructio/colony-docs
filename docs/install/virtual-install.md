@@ -57,5 +57,5 @@ make dc
 
 ## What's next?
 
-- Check out what's [included with the Vagrant VM](/install/vagrant.md)
+- Check out what's [included with the Vagrant VM](vagrant.md)
 - Skip ahead and [start using Colony to discover assets](/clusters/index.md)
