@@ -22,7 +22,7 @@
     "permalink": "/docs/next/"
   },
   "next": {
-    "title": "Vagrant VM",
-    "permalink": "/docs/next/install/vagrant"
+    "title": "Installing Colony",
+    "permalink": "/docs/next/install/virtual-install"
   }
 }

@@ -1,6 +1,7 @@
 ---
 title: Installing Colony
 description: Follow the steps to install Colony in a virtual Vagrant environment
+sidebar_position: 3
 ---
 
 # Installing Colony

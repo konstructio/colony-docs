@@ -1,6 +1,7 @@
 ---
 title: Vagrant VM
 description: Learn more about how the Vagrant VM works
+sidebar_position: 4
 ---
 
 ## How does the Vagrant VM work?
