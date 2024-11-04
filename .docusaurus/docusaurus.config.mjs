@@ -25,7 +25,7 @@ export default {
       {
         "docs": {
           "routeBasePath": "/",
-          "sidebarPath": "/Users/fharper/Documents/code/k1/colony-docs/sidebars.js"
+          "sidebarPath": "/Users/ccosta/Documents/GitHub/colony-docs/sidebars.js"
         },
         "blog": false,
         "theme": {
@@ -67,7 +67,7 @@ export default {
           "items": []
         }
       ],
-      "copyright": "Copyright © 2024 kubefirst"
+      "copyright": "Copyright © 2024 Konstruct"
     },
     "prism": {
       "theme": {
