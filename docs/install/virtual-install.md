@@ -19,6 +19,10 @@ To be able to run this virtual environment for Colony you’re going to need the
  - A [Civo API key](https://www.civo.com/docs/account/api-keys) 
  - A Colony API token (*details on creating this below*)
 
+:::tip
+The Civo instance that hosts this virtual environment costs just under $1 to run for 4 hours, which is plenty of time to create some new bare metal Kubernetes clusters and add a hello world. 
+:::
+
 ### Generate your Colony API Key 
 Logging in to Colony for the first time creates your account and gives you access to create an API Key. Accounts can be created by logging in with: Civo, GitHub, GitLab, or Google.
 
