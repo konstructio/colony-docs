@@ -13,7 +13,7 @@ Colony provides you a way to easily manage bare metal OS provisioning and deprov
  - Read the [latest blog on Colony.](https://blog.konstruct.io/virtual-data-center/) 
  - Check out [the Product page](https://konstruct.io/colony) to learn more about Colony features and to request a demo. 
 
-![Colony UI](../img/templates/colony/colonylanding.png)
+![Colony UI](../img/colony/colonylanding.png)
 
 ## Getting Support
 
