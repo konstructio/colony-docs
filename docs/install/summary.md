@@ -12,8 +12,9 @@ Ensure you have the components required for the installation and then refer to t
 
 ## Colony Vagrant Support
 
-We have created a virtual data center called colony-vagrant that you can host on a single Civo compute instance.
+This installation guide walks through what you need to install Colony into a repeatable Vagrant virtual environment. The virtual data center `colony-vagrant` creates an environment that you can host on a single Civo compute instance to explore Colony
 We’re working to expand support for this virtual data center to include AWS soon. 
+
 
 ## What You’ll Need
 To be able to run this virtual environment for Colony you’re going to need the following:
@@ -30,6 +31,9 @@ Logging in to Colony for the first time creates your account and gives you acces
 Complete the steps to generate a new Colony API Key
 
 1. Log in to Colony (https://colony.konstruct.io/)
-2. Navigate to **API Keys** and select **Generate an API Key**
+2. Navigate to **API Keys** and select **Generate API Key**
 
-![Colony UI](./img/colony/colonyAPIKey.png)
+![Colony API Key](./img/colony/colony-apikey.png)
+
+3. Once created, copy and save the key information to use in your Colony install.
+
