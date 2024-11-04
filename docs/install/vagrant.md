@@ -6,9 +6,9 @@ sidebar_position: 4
 
 ## How does the Vagrant VM work?
 
-After the virtual datacenter setup completes there will be a small virtual rack of servers, including an exit node, a spine leaf network, and 5 virtual machines (VM) that are still waiting to be turned on and auto-enrolled with Colony.
+After the virtual data center setup completes there will be a small virtual rack of servers, including an exit node, a spine leaf network, and 5 virtual machines (VM) that are still waiting to be turned on and auto-enrolled with Colony.
 
-The first part of the install is a setup that puts you on a VM “laptop” to emulate the experience of using Colony in a datacenter.
+The first part of the install is a setup that puts you on a VM “laptop” to emulate the experience of using Colony in a data center.
 
 Your VM “laptop” is loaded with tools like: 
  - Docker

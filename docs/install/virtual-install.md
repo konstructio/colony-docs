@@ -44,7 +44,7 @@ Follow the steps below to launch a virtual Vagrant environment.
 ```git
 git clone https://github.com/konstructio/colony-vagrant
 ```
-2. Navigate to the directory for the repo and make your datacenter.
+2. Navigate to the directory for the repo and make your data center.
 
 ```
 cd colony-vagrant
@@ -53,12 +53,12 @@ make dc
 3. In the terminal, **select a region**. (*We typically use `nyc1`*)
 4. Add your **Civo API Key**
 5. Enter your default **SSH key** (or your own/explicit key)
-6. Enter **a name** for your datacenter instance.
+6. Enter **a name** for your data center instance.
 7. Add your **Colony API Key**
 8. Select the default **Colony CLI**
 9. Click to select **Create datacenter**
 
-⏲️ *The process to create your virtual datacenter typically takes about 10 minutes.*
+⏲️ *The process to create your virtual data center typically takes about 10 minutes.*
 
 ## What's next?
 
