@@ -20,7 +20,7 @@
     "permalink": "/docs/next/install/"
   },
   "next": {
-    "title": "Clusters",
-    "permalink": "/docs/next/clusters/"
+    "title": "Vagrant VM",
+    "permalink": "/docs/next/install/vagrant"
   }
 }
