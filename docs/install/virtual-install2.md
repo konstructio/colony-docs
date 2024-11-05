@@ -47,7 +47,7 @@ After your assets are all listed as “discovered” you can navigate to the **C
 In a real-world set up data centers have network segmentation rules governing the IP address ranges in use. 
 :::
 
-1. Select **Create Cluster** and choose **Kubernete**s from the menu to open the initial configuration. *For this example we’re going to create a new cluster with Talos.*
+1. Select **Create Cluster** and choose **Kubernetes** from the menu to open the initial configuration. *For this example we’re going to create a new cluster with Talos.*
 2. Complete the cluster details as follows:
     - Select a cluster type - Talos (*simplicity and security*) 
     - Cluster Name - talos-demo (*or something similar*) 

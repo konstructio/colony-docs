@@ -39,12 +39,12 @@ Complete the steps to generate a new Colony API Key
 
 Follow the steps below to launch a virtual Vagrant environment.
 
-1. Run the following command to clone the Vagrant repo for Colony.
+1. Run the following command to clone the Vagrant repository for Colony.
 
 ```git
 git clone https://github.com/konstructio/colony-vagrant
 ```
-2. Navigate to the directory for the repo and make your data center.
+2. Navigate to the directory for the repository and make your data center.
 
 ```
 cd colony-vagrant

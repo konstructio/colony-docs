@@ -19,7 +19,7 @@ Your VM “laptop” is loaded with tools like:
  - Kubens
  - Colony CLI 
 
-If you're curious about all of the tools we install, check out the repo details [in the setup here.](https://github.com/konstructio/colony-vagrant/blob/5182ef647fab8cffa17147a73ea6270da05c66fe/laptop/setup.sh#L3-L103) 
+If you're curious about all of the tools we install, check out the repository details [in the setup here.](https://github.com/konstructio/colony-vagrant/blob/5182ef647fab8cffa17147a73ea6270da05c66fe/laptop/setup.sh#L3-L103) 
 
 ## Vagrant VM diagram
 
