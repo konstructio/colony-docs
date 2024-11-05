@@ -7,23 +7,26 @@ sidebar_position: 3
 # Installing Colony
 
 ## Summary
+
 This installation guide walks through what you need to install Colony into a repeatable Vagrant virtual environment. The virtual data center `colony-vagrant` creates an environment that you can host on a single Civo compute instance to explore Colony
 
 *We’re working to expand support for this virtual data center to include AWS soon.*
 
 ## What you’ll need
+
 To be able to install and run this virtual environment you need:
 
- - Git (Run `brew install git`)
- - Make (Run `brew install make`) 
- - A [Civo API key](https://www.civo.com/docs/account/api-keys) 
- - A Colony API token (*details on creating this below*)
+- Git (Run `brew install git`)
+- Make (Run `brew install make`)
+- A [Civo API key](https://www.civo.com/docs/account/api-keys)
+- A Colony API token (*details on creating this below*)
 
 :::tip
-The Civo instance that hosts this virtual environment costs just under $1 to run for 4 hours, which is plenty of time to create some new bare metal Kubernetes clusters and add a hello world. 
+The Civo instance that hosts this virtual environment costs just under $1 to run for 4 hours, which is plenty of time to create some new bare metal Kubernetes clusters and add a hello world.
 :::
 
 ### Generate your Colony API Key 
+
 Logging in to Colony for the first time creates your account and gives you access to create an API Key. Accounts can be created by logging in with: Civo, GitHub, GitLab, or Google.
 
 Complete the steps to generate a new Colony API Key
@@ -44,12 +47,14 @@ Follow the steps below to launch a virtual Vagrant environment.
 ```git
 git clone https://github.com/konstructio/colony-vagrant
 ```
+
 2. Navigate to the directory for the repository and make your data center.
 
-```
+```bash
 cd colony-vagrant
 make dc
 ```
+
 3. In the terminal, **select a region**. (*We typically use `nyc1`*)
 4. Add your **Civo API Key**
 5. Enter your default **SSH key** (or your own/explicit key)
@@ -58,7 +63,7 @@ make dc
 8. Select the default **Colony CLI**
 9. Click to select **Create data center**
 
-⏲️ *The process to create your virtual data center typically takes about 10 minutes.*
+_The process to create your virtual data center typically takes about 10 minutes._
 
 After the virtual data center setup completes there will be a small virtual rack of servers, including an exit node, a spine leaf network, and 5 virtual machines (VM) waiting to be turned on and auto-enrolled with Colony.
 
