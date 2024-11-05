@@ -10,7 +10,7 @@ sidebar_position: 3
 
 This installation guide walks through what you need to install Colony into a repeatable Vagrant virtual environment. The virtual data center `colony-vagrant` creates an environment that you can host on a single Civo compute instance to explore Colony
 
-*We’re working to expand support for this virtual data center to include AWS soon.*
+_We’re working to expand support for this virtual data center to include AWS soon._
 
 ## What you’ll need
 
@@ -19,13 +19,13 @@ To be able to install and run this virtual environment you need:
 - Git (Run `brew install git`)
 - Make (Run `brew install make`)
 - A [Civo API key](https://www.civo.com/docs/account/api-keys)
-- A Colony API token (*details on creating this below*)
+- A Colony API token (_details on creating this below_)
 
 :::tip
 The Civo instance that hosts this virtual environment costs just under $1 to run for 4 hours, which is plenty of time to create some new bare metal Kubernetes clusters and add a hello world.
 :::
 
-### Generate your Colony API Key 
+### Generate your Colony API Key
 
 Logging in to Colony for the first time creates your account and gives you access to create an API Key. Accounts can be created by logging in with: Civo, GitHub, GitLab, or Google.
 
