@@ -15,9 +15,11 @@ Your VM “laptop” is loaded with tools like:
  - Helm
  - Kubectl - We add an alias for this 
  - Tinkerbell (tink stack) 
-- K3d (soon to be k3s)
-- Kubens
-- Colony CLI 
+ - K3d (soon to be k3s)
+ - Kubens
+ - Colony CLI 
+
+Check out the details in the repo [in the setup here.](https://github.com/konstructio/colony-vagrant/blob/5182ef647fab8cffa17147a73ea6270da05c66fe/laptop/setup.sh#L3-L103) 
 
 ## Vagrant VM diagram
 

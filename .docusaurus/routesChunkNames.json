@@ -48,17 +48,17 @@
       "plugin": "plugin---docs-searche-99-e77"
     }
   },
-  "/docs/-9ba": {
+  "/docs/-148": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docs-aba-4f5"
     }
   },
-  "/docs/next-d91": {
+  "/docs/next-138": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-nextbf-1-ba7"
   },
-  "/docs/next-918": {
+  "/docs/next-99a": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/next/-8b3": {
@@ -76,10 +76,6 @@
   "/docs/next/install/virtual-install-d8c": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-next-install-virtual-install-41-d-173"
-  },
-  "/docs/next/templates/-85b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-next-templates-066-995"
   },
   "/docs/next/usage/-849": {
     "__comp": "__comp---theme-doc-item-178-a40",
