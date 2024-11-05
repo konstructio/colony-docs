@@ -12,7 +12,7 @@ This installation guide walks through what you need to install Colony into a rep
 *We’re working to expand support for this virtual data center to include AWS soon.*
 
 ## What you’ll need
-To be able to run this virtual environment for Colony you’re going to need the following:
+To be able to install and run this virtual environment you need:
 
  - Git (Run `brew install git`)
  - Make (Run `brew install make`) 
@@ -56,11 +56,13 @@ make dc
 6. Enter **a name** for your data center instance.
 7. Add your **Colony API Key**
 8. Select the default **Colony CLI**
-9. Click to select **Create datacenter**
+9. Click to select **Create data center**
 
 ⏲️ *The process to create your virtual data center typically takes about 10 minutes.*
 
+After the virtual data center setup completes there will be a small virtual rack of servers, including an exit node, a spine leaf network, and 5 virtual machines (VM) waiting to be turned on and auto-enrolled with Colony.
+
 ## What's next?
 
+- [Start using Colony to discover assets](virtual-install2)
 - Check out what's [included with the Vagrant VM](vagrant)
-- Skip ahead and [start using Colony to discover assets](../usage)
