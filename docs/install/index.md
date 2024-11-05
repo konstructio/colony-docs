@@ -6,4 +6,8 @@ sidebar_position: 2
 
 # Get Started
 
-Get started with Colony by installing our virtual Vagrant environment to see how quick and easy it is to use. 
+If you're new to Colony we recommend checking out the [Overview](/docs/index.md) to learn more about Colony.
+
+Right now the easiest way to get started with Colony is by [installing our virtual Vagrant environment](virtual-install) to see how quick and easy it is to use. 
+
+Keep at eye out for our future releases for install instructions in your data center. If you want to learn more [join our Slack Community](https://konstructio.slack.com/)! 
