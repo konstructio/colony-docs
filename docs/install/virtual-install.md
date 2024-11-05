@@ -31,7 +31,7 @@ Logging in to Colony for the first time creates your account and gives you acces
 
 Complete the steps to generate a new Colony API Key
 
-1. Log in to Colony (https://colony.konstruct.io/)
+1. Log in to [Colony](https://colony.konstruct.io/)
 2. Navigate to **API Keys** and select **Generate API Key**
 
 ![Colony API Key](../img/colony/colony-apikey.png)
@@ -55,13 +55,13 @@ cd colony-vagrant
 make dc
 ```
 
-3. In the terminal, **select a region**. (*We typically use `nyc1`*)
-4. Add your **Civo API Key**
-5. Enter your default **SSH key** (or your own/explicit key)
+3. In the terminal, **select a region**. (_We typically use `nyc1`_)
+4. Add your **Civo API Key**.
+5. Enter your default **SSH key** (or your own/explicit key).
 6. Enter **a name** for your data center instance.
-7. Add your **Colony API Key**
-8. Select the default **Colony CLI**
-9. Click to select **Create data center**
+7. Add your **Colony API Key**.
+8. Select the default **Colony CLI**.
+9. Click to select **Create data center**.
 
 _The process to create your virtual data center typically takes about 10 minutes._
 
