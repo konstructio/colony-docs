@@ -12,13 +12,13 @@ The first part of the install is a setup that puts you on a VM “laptop” to m
 
 Your VM “laptop” is loaded with tools like:
 
+- Colony CLI
 - Docker
 - Helm
-- Kubectl - We add an alias for this
-- Tinkerbell (Tinkerbell stack)
 - K3d
-- Kubens
-- Colony CLI
+- kubectl - We add an alias for this
+- kubens
+- Tinkerbell (Tinkerbell stack)
 
 If you're curious about all of the tools we install, check out the repository details [in the setup here.](https://github.com/konstructio/colony-vagrant/blob/5182ef647fab8cffa17147a73ea6270da05c66fe/laptop/setup.sh#L3-L103)
 
