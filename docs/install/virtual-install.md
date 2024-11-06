@@ -33,8 +33,7 @@ Complete the steps to generate a new Colony API Key
 
 1. Log in to [Colony](https://colony.konstruct.io/)
 2. Navigate to **API Keys** and select **Generate API Key**
-
-![Colony API Key](../img/colony/colony-apikey.png)
+   ![Colony API Key](../img/colony/colony-apikey.png)
 
 3. Once created, **copy and save the key** to use in your Colony install.
 
@@ -44,16 +43,16 @@ Follow the steps below to launch a virtual Vagrant environment.
 
 1. Run the following command to clone the Vagrant repository for Colony.
 
-```git
-git clone https://github.com/konstructio/colony-vagrant
-```
+   ```git
+   git clone https://github.com/konstructio/colony-vagrant
+   ```
 
 2. Navigate to the directory for the repository and make your data center.
 
-```bash
-cd colony-vagrant
-make dc
-```
+   ```bash
+   cd colony-vagrant
+   make dc
+   ```
 
 3. In the terminal, **select a region**. (_We typically use `nyc1`_)
 4. Add your **Civo API Key**.

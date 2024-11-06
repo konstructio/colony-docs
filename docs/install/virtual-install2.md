@@ -52,13 +52,11 @@ In a real-world set up data centers have network segmentation rules governing th
 :::
 
 1. Select **Create Cluster** and choose **Kubernetes** from the menu to open the initial configuration. *For this example we’re going to create a new cluster with Talos.*
-   
 2. Complete the cluster details as follows:
-   
-- Select a cluster type - Talos (*simplicity and security*)
-- Cluster Name - talos-demo (*or something similar*)
-- Global Gateway IP - 10.0.10.1 (*static for the vagrant data center environment*)
-- Additional SANS (*not required*)
+   - Select a cluster type - Talos (*simplicity and security*)
+   - Cluster Name - talos-demo (*or something similar*)
+   - Global Gateway IP - 10.0.10.1 (*static for the vagrant data center environment*)
+   - Additional SANS (*not required*)
 
 3. Select **Next** to continue to select a Control Plane (*you can choose one or multiples, these instructions are for one*)
 4. Select the top disk (the multi-disk setup is just to show support)
