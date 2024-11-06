@@ -79,7 +79,7 @@ const config = {
             title: 'Docs',
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} kubefirst`,
+        copyright: `Copyright © ${new Date().getFullYear()} Konstruct`,
       },
       prism: {
         theme: prismThemes.github,
