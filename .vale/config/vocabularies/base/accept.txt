@@ -45,6 +45,7 @@ kbot
 KMS
 konstruct
 kubectl
+kubens
 
 # L
 Linode
@@ -93,6 +94,7 @@ uncomment
 # V
 vale
 vcluster
+VM
 Vultr
 
 # W
