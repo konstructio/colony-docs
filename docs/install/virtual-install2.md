@@ -32,7 +32,7 @@ Now that everything is installed and your VM “laptop” is up and running you�
    ```
 
    :::info
-   If you connect to Colony and (*in the UI*) nothing appears after a minute or two there’s definitely an issue with the setup. Get in touch with us and we’ll be happy to get you sorted out.
+   If you connect to Colony and (_in the UI_) nothing appears after a minute or two there’s definitely an issue with the setup. Get in touch with us and we’ll be happy to get you sorted out.
    :::
 
 4. Now imagine you’re walking around in the data center to “turn on” the virtual machines.
@@ -58,7 +58,7 @@ In a real-world set up data centers have network segmentation rules governing th
    - Global Gateway IP - 10.0.10.1 (_static for the vagrant data center environment_)
    - Additional SANS (_not required_)
 
-3. Select **Next** to continue to select a Control Plane (*you can choose one or multiples, these instructions are for one*)
+3. Select **Next** to continue to select a Control Plane (_you can choose one or multiples, these instructions are for one_)
 4. Select the top disk (the multi-disk setup is just to show support)
    - Static IP for all the VMs --> 10.0.10.20/24
 5. Select **Next** to continue to the Worker Node.
