@@ -9,7 +9,6 @@ sidebar_position: 2
 This guide walks through the setup of Laptop-0, a machine for running Colony, and 3 additional VM's for Colony to auto discovery and install a Talos cluster.  Some items to note:
 
 - Colony requires Docker.
-- If you have a firewall on your host machine (laptop 0) it needs to allow the following ports (ports TBA).
 
 Warning: Colony will be able to PXE boot all machines in your network.
 
