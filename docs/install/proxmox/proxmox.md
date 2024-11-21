@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Using Colony with Proxmox
 
-The Proxmox installation guide walks through setting up a virtual laptop (or Laptop-0) to run Colony using Proxmox along with three additional VM's for Colony to auto-discover and install a K3S cluster.  
+The Proxmox installation guide walks through setting up a virtual laptop (or Laptop-0) to run Colony using Proxmox along with three additional VM's for Colony to auto-discover and install a Talos cluster.  
 
 You can learn [a bit more about Proxmox here.](https://www.proxmox.com/en/)
 
