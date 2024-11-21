@@ -31,7 +31,7 @@ These steps use a `debian cloudinit image for laptop VM`.
 
 - Might to prepend sudo if you running user different than `root`
 
-Download debian cloud init image [debian download image](https://cloud.debian.org/images/cloud/). Create the directory anywhere. Select the correct architecture. This example runs on x86
+Start by creating a directory. This will contain temporary artifacts we need to create template VM. Then download Debian cloud-init image [debian download image](https://cloud.debian.org/images/cloud/). 
 
 ```shell
 mkdir debian-golden-img
