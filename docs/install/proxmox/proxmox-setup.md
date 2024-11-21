@@ -51,7 +51,7 @@ virt-customize -a debian-12-genericcloud-amd64-20241004-1890.qcow2 --install vim
 
 ### Helm and Kubectl
 
-Install `kubectl` and `Helm` binary. Download and copy to `/usr/local/bin`
+Install Kubectl and Helm binaries and copy them over to the template VM to ensure these tools are available for managing Kubernetes clusters and Helm charts. Adding them to the template VM ensures that they are automatically included in any new VMs created from the template, eliminating the need for manual installation. 
 
 For helm
 
