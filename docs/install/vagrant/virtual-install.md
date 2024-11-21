@@ -1,5 +1,5 @@
 ---
-title: Installing Colony
+title: Installing Colony with Vagrant
 description: Follow the steps to install Colony in a virtual Vagrant environment
 sidebar_position: 3
 ---
@@ -33,7 +33,7 @@ Complete the steps to generate a new Colony API Key
 
 1. Log in to [Colony](https://colony.konstruct.io/)
 2. Navigate to **API Keys** and select **Generate API Key**
-   ![Colony API Key](../img/colony/colony-apikey.png)
+   ![Colony API Key](../../img/colony/colony-apikey.png)
 
 3. Once created, **copy and save the key** to use in your Colony install.
 

@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-description: Follow the steps to install Colony in a virtual Vagrant environment
+description: Choose an option to install Colony in an environment and start bare metal provisioning
 sidebar_position: 2
 ---
 
@@ -12,6 +12,9 @@ Keep at eye out for our future releases for install instructions in your data ce
 
 ## How do I try Colony?
 
-Right now the easiest way to get started with Colony is by [installing our virtual Vagrant environment](virtual-install) to see how quick and easy it is to use.
+We offer two ways to get started with Colony:
+
+- Check out Colony by [installing our virtual Vagrant environment](./vagrant/virtual-install.md)
+- Check out Colony by running Proxmox
 
 After you complete the initial set up, you can use Colony to discover your assets and provision a cluster.
