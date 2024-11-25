@@ -3,7 +3,7 @@ title: Use Colony with Vagrant
 description: Use Colony in a virtual environment to learn more 
 sidebar_position: 4
 ---
-# Use Colony in the VM
+## Using Colony in the VM
 
 ## Summary
 

@@ -4,7 +4,7 @@ description: Choose an option to install Colony in an environment and start bare
 sidebar_position: 2
 ---
 
-# Get Started
+## Get Started
 
 If you're new to Colony we recommend checking out the [Overview](/docs/index.md) to learn more about Colony.
 

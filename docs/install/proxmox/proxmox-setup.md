@@ -18,7 +18,8 @@ The steps here are optional, but we recommend completing these to create a Proxm
 
 ### Debian image
 
-These steps use a `debian cloudinit image for laptop VM`.
+These steps use a `debian cloudinit image for laptop VM`. The commands below should be issued in the Proxmox host machine. You can SSH into the host or use the shell in the Proxmox UI. 
+To access the shell select `Datacenter` > your node (choose one if you have multiple > `shell`.
 
 - You will need to install `libguestfs-tools` to interact with cloud-init image.
 
@@ -27,8 +28,9 @@ These steps use a `debian cloudinit image for laptop VM`.
     apt install libguestfs-tools
     ```
 
-
-- Might to prepend sudo if you running user different than `root`
+:::tip
+We recommend prepending sudo to these commands if you are running a user other than `root`. 
+:::
 
 Start by creating a directory. This will contain temporary artifacts we need to create template VM. Then download Debian cloud-init image [debian download image](https://cloud.debian.org/images/cloud/). 
 
@@ -40,8 +42,7 @@ wget https://cloud.debian.org/images/cloud/bookworm/20241004-1890/debian-12-gene
 ```
 
 ### Guest agent and VIM
-
-Install `qemu-guest-agent` and `vim`. This enables information to report back from the guest machine to the host. Allows power off commands to pass to the guest.
+We recommend using `virt-customize` to install `qemu-guest-agent` and `vim`. The `qemu-guest-agent` provides a communication channel between a virtual machine and its Proxmox, enabling features like shutdown, time synchronization, and better management of guest systems.  
 
 ```shell
 virt-customize -a debian-12-genericcloud-amd64-20241004-1890.qcow2 --install qemu-guest-agent
@@ -72,7 +73,7 @@ virt-customize -a debian-12-genericcloud-amd64-20241004-1890.qcow2 --copy-in ./k
 
 ### Resize config
 
-Remove machine config and resize root disk to `32 Gb`. This allows new virtual machines created from the template to have unique machine ID.
+To prepare the virtual machine increase the disk size to `32 Gb` and remove any machine-specific information generated in the previous step. This ensures that the image can be cloned and reused without conflicts.
 
 ```shell
 virt-sysprep -a debian-12-genericcloud-amd64-20241004-1890.qcow2
@@ -175,10 +176,10 @@ sudo mv colony /usr/local/bin
 Install colony. Better wording would be creaste a Colony cluste or something. Check the interface you are listening on with `ip a` command.
 Colony will use this interface to listen to DHCPOFFER traffic and respond with boot files.
 
-``` shell
 colony init \
-    --apiKey $YOUR_COLONY_API_KEY \
-    --loadBalancerInterface eth0 \
+    --api-key=$COLONY_API_KEY \
+    --load-balancer-interface=$INTERFACE \
+    --load-balancer-ip=$LOAD_BALANCER_IP
     --loadBalancerIP <loadbalancer>
 ```
 

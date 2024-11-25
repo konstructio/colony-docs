@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Using Colony
 
-With Proxmox installed and Colony running you should be able to view all of the infrastructure you created in the Colony UI. 
+With Proxmox installed and Colony running you should be able to view all of the infrastructure you created in the Colony UI.
 
 ## Creating Clusters
 
