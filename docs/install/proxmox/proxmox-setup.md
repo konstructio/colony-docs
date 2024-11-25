@@ -27,7 +27,6 @@ These steps use a `debian cloudinit image for laptop VM`.
     apt install libguestfs-tools
     ```
 
-- Commands should be run in Proxmox shell, which can be accessed through the Proxmox UI through `datacenter > <node-name> > shell`, or through ssh.
 
 - Might to prepend sudo if you running user different than `root`
 
