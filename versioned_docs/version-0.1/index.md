@@ -4,6 +4,15 @@ description: Learn more about Konstruct's bare metal data center product
 sidebar_position: 1
 ---
 
+:::tip
+
+Colony is currently in beta. Beta is currently **open and free**, but subsequent releases are expected to include a paywall.
+
+If you're interested in using Colony and still have questions, we're here to help!
+[Join our Slack Community](https://konstructio.slack.com/) for more information.
+
+:::
+
 # What is Colony?
 
 Colony is a bare metal provisioner and data center infrastructure management system. It's a cloud native microservice ecosystem with some components hosted in Konstruct and other components that run in your data centers.
