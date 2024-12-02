@@ -6,7 +6,7 @@ sidebar_position: 1
 
 :::tip
 
-Colony is currently in beta. Beta is currently **open and free**, but subsequent releases are expected to include a paywall. 
+Colony is currently in beta. Beta is currently **open and free**, but subsequent releases are expected to include a paywall.
 
 If you're interested in using Colony and still have questions, we're here to help!
 [Join our Slack Community](https://konstructio.slack.com/) for more information.
