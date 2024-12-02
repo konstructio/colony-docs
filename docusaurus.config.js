@@ -76,9 +76,34 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Community',
+            items: [
+
+              {
+                label: 'Slack',
+                href: 'https://konstructio.slack.com',
+              },
+              {
+                label: 'Twitter',
+                href: 'https://x.com/konstructio',
+              },
+            ],
           },
-        ],
+          {
+            title: `More`,
+            items: [
+
+              {
+                label: `Blog`,
+                href: `https://blog.konstruct.io/`, 
+              },
+              {
+                label: `Docs Home`,
+                href: `https://konstruct.io/docs`,
+              }
+            ]
+          }
+                   ],
         copyright: `Copyright © ${new Date().getFullYear()} Konstruct`,
       },
       prism: {
