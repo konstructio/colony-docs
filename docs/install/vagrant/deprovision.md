@@ -1,6 +1,6 @@
 ---
-title: Colony Admin
-description: Follow the steps to install Colony in a virtual Vagrant environment
+title: Colony Admin for Civo
+description: Additional administrative tasks like deprovisioning and updating for Colony in Civo
 sidebar_position: 6
 ---
 
@@ -19,4 +19,4 @@ The Civo instance that hosts this virtual environment costs just under $1 to run
 
 ## Updating Colony
 
-Coming Soon
+!! Coming Soon
