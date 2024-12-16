@@ -120,7 +120,7 @@ const config = {
               protocol: 'https',
             },
           ],
-          apiKey: 'Ctjain25NclnKuULU8AvLLHASrFhEn1K',
+          apiKey: 'TDKqtzB8gc4kQAosaQxGZi4YBUdSoPoW',
         },
         contextualSearch: true,
       },
