@@ -4,8 +4,6 @@ description: Follow the steps to install Colony in a virtual Vagrant environment
 sidebar_position: 3
 ---
 
-# Installing Colony
-
 ## Summary
 
 This installation guide walks through what you need to install Colony into a repeatable Vagrant virtual environment. The virtual data center `colony-vagrant` creates an environment that you can host on a single Civo compute instance to explore Colony
@@ -50,7 +48,8 @@ Follow the steps below to launch a virtual Vagrant environment.
 2. Navigate to the directory for the repository and make your data center.
 
    ```bash
-   cd colony-vagrant
+   ccd colony-vagrant
+   export KUBEFIRST_TEAM=vagrant
    make dc
    ```
 

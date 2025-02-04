@@ -13,7 +13,7 @@ If you're interested in using Colony and still have questions, we're here to hel
 
 :::
 
-# What is Colony?
+## What is Colony?
 
 Colony is a bare metal provisioner and data center infrastructure management system. It's a cloud native microservice ecosystem with some components hosted in Konstruct and other components that run in your data centers.
 
