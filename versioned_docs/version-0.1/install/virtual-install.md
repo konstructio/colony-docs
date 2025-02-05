@@ -48,7 +48,7 @@ Follow the steps below to launch a virtual Vagrant environment.
 2. Navigate to the directory for the repository and make your data center.
 
    ```bash
-   ccd colony-vagrant
+   cd colony-vagrant
    export KUBEFIRST_TEAM=vagrant
    make dc
    ```
