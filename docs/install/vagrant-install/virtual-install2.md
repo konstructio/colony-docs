@@ -1,9 +1,8 @@
 ---
-title: Use Colony 
+title: Use Colony in the VM
 description: Use Colony in a virtual environment to learn more 
 sidebar_position: 4
 ---
-# Use Colony in the VM
 
 ## Summary
 
@@ -41,7 +40,7 @@ Now that everything is installed and your VM “laptop” is up and running you�
 
 You should see something like this:
 
-![Colony new data center](../img/usage/newdatacenter.png)
+![Colony new data center](../../img/usage/newdatacenter.png)
 
 ## Creating Clusters
 
