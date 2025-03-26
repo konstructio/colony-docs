@@ -19,15 +19,15 @@ Before getting started with a production Colony deployment we recommend reviewin
 A machine running Colony requires a minimum of the following:
     - 8 GB of Ram
     - 4 or more recent x86-64 CPU cores. _Arm processors are not currently supported._
-    - 64Gb for root volume. _We highly recommend high throughput for a drive for the underlying partition._
+    - 64Gb for root volume. _We highly recommend a high throughput drive for the boot drive._
 
 ### Networking Requirements
 
 A good rule of thumb regarding network requirements for Colony is to put it on the same subnet as the machines you would like it to manage. Colony relies on (Layer 2 DHCP protocol) and the DHCP Discover packet to identify and create a record for a machine.
 
-At present, Colony doesn't include a DHCP server. If your out-of-band management and `==networking booting==` reside in separate VLANs, the Colony interface connected to the network should be untagged. _It currently only supports IPV4._
+At present, Colony doesn't include a DHCP server. If your have separate networks for interacting with out-of-band management inside the assets and reaching out to the internet, the Colony interface connected to the network should be untagged. _It currently only supports IPV4._
 
-The network boot (PXE) subnet should have access to the following addresses to pull manifest, container images, and boot images
+The private VLAN should have access to the following addresses to pull manifest, container images, and ISO file.
 
 - Github
 - Github Container registry
@@ -39,7 +39,7 @@ The network boot (PXE) subnet should have access to the following addresses to p
 
 To summarize:
 
-- Interface connected to out-of-band network and network boot should be untagged
+- Interface connected to out-of-band network and private network should be untagged
 - DHCP server running inside network boot
 - Internet Access
 
