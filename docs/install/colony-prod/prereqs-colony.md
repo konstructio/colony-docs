@@ -27,7 +27,7 @@ A good rule of thumb regarding network requirements for Colony is to put it on t
 
 At present, Colony doesn't include a DHCP server. If your have separate networks for interacting with out-of-band management inside the assets and reaching out to the internet, the Colony interface connected to the network should be untagged. _It currently only supports IPV4._
 
-The network boot (PXE) subnet should have access to the following addresses to pull manifest, container images, and boot images
+The private VLAN should have access to the following addresses to pull manifest, container images, and ISO file.
 
 - Github
 - Github Container registry
