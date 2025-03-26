@@ -10,7 +10,7 @@ Before getting started with a production Colony deployment we recommend reviewin
 
 ### Common Terms
 
-- **Laptop**: A machine used to bootstrap a Colony installation. The use of this term does not represent an actual laptop. It could be a physical machine or virtualized machine.
+- **Laptop**: A machine used to bootstrap a Colony installation. The use of this term does not represent an actual laptop. It could be a physical machine or virtual machine.
 
 - **Asset**: A machine to be discovered and turned into a cluster using Colony.
 
@@ -29,8 +29,8 @@ At present, Colony doesn't include a DHCP server. If your have separate networks
 
 The private VLAN should have access to the following addresses to pull manifest, container images, and ISO file.
 
-- Github
-- Github Container registry
+- GitHub
+- GitHub Container registry
 - Docker Hub
 - Talos Factory
 - Ubuntu mirrors
