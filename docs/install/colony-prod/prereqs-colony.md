@@ -39,7 +39,7 @@ The network boot (PXE) subnet should have access to the following addresses to p
 
 To summarize:
 
-- Interface connected to out-of-band network and network boot should be untagged
+- Interface connected to out-of-band network and private network should be untagged
 - DHCP server running inside network boot
 - Internet Access
 
