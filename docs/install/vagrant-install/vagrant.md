@@ -1,5 +1,5 @@
 ---
-title: Vagrant VM
+title: Explore the Vagrant VM
 description: Learn more about how the Vagrant VM works
 sidebar_position: 5
 ---
@@ -24,4 +24,4 @@ If you're curious about all of the tools we install, check out the repository de
 
 ## Vagrant VM diagram
 
-![Colony Vagrant Diagram](../img/colony/colonyvagrantdiagram.png)
+![Colony Vagrant Diagram](../../img/colony/colonyvagrantdiagram.png)
