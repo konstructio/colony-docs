@@ -27,7 +27,7 @@ Add your user to the Docker group. Skip this step if you are `root` user
     sudo usermod -aG docker $USER
     ```
 
-After running the command you might need to exit your current session and start new one. To test whether your user account has access to the Docker daemon,run
+After running the command you might need to exit your current session and start a new one. To test whether your user account has access to the Docker daemon,run:
 
     ```bash
     docker run docker.io/hello-world
@@ -44,7 +44,7 @@ For kubectl, use the following:
 
 ## Installing Colony
 
-The following installation instructions apply to Colony version 0.02-rc1 (code named `Christmas-night`).
+The following installation instructions apply to Colony version 0.02-rc1.
 
     ```bash
     git clone -b ipmi https://github.com/konstructio/colony.git
