@@ -19,7 +19,7 @@ Before getting started with a production Colony deployment we recommend reviewin
 A machine running Colony requires a minimum of the following:
     - 8 GB of Ram
     - 4 or more recent x86-64 CPU cores. _Arm processors are not currently supported._
-    - 64Gb for root volume. _We highly recommend high throughput for a drive for the underlying partition._
+    - 64Gb for root volume. _We highly recommend a high throughput drive for the boot drive._
 
 ### Networking Requirements
 
