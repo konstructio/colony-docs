@@ -67,5 +67,5 @@ In a real-world set up data centers have network segmentation rules governing th
 
 :::tip
 
-Check out the [Colony Admin page](../usage) for details on deprovisioning
+Check out the [Colony Admin page](../../usage/) for details on deprovisioning
 :::
