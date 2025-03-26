@@ -27,7 +27,7 @@ Add your user to the Docker group. Skip this step if you are `root` user
     sudo usermod -aG docker $USER
     ```
 
-After running the command you might need to exit your current session and start new one. To test your permissions to interact with the Docker daemon run
+After running the command you might need to exit your current session and start new one. To test whether your user account has access to the Docker daemon,run
 
     ```bash
     docker run docker.io/hello-world
