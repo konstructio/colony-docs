@@ -12,7 +12,7 @@ Before getting started with a production Colony deployment we recommend reviewin
 
 - **Laptop**: A machine used to bootstrap a Colony installation. The use of this term does not represent an actual laptop. It could be a physical machine or virtualized machine.
 
-- **Assets**:
+- **Asset**: A machine to be discovered and turned into a cluster using Colony.
 
 ### Hardware Requirements
 
@@ -61,4 +61,4 @@ Colony has been tested with the following operating systems. Theoretically any o
 
 ### Other Requirements
 
-Colony requires root privileges for machine running.
+Root privileges are required for the host machine used to run Colony.
