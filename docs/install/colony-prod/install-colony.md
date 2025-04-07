@@ -21,7 +21,7 @@ The following installation instructions apply to Colony version 0.02-rc1.
 ## Step 2 - Create Your API Key
 
 1. Navigate to `https://colony.konstruct.io/`
-2. Log in with any of the options listed, this step creates your datacenter (and unique ID for the data center)
+2. Log in with any of the options listed, this step creates your data center (and unique ID for the data center)
 3. Go to **API Keys** and select **Create New API Key**.
 
 **Save this information in a safe place, it only displays once.**
@@ -68,7 +68,7 @@ The new asset will appear under the assets tab in the Colony UI.
 
 ## Step 5 - Adding a Cluster
 
-After your Assets are discovered and listed as available you can use them to provision a cluster. You must have atleast two Assets to create a cluster (one for the Control plane and one for the Worker node).
+After your Assets are discovered and listed as available you can use them to provision a cluster. You must have a minimum of two Assets to create a cluster (one for the Control plane and one for the Worker node).
 
 ![Create Cluster with Civo](../../img/civostack/initial-configuration.png)
 
