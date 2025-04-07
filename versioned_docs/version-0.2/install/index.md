@@ -12,7 +12,7 @@ Keep at eye out for our future releases for install instructions in your data ce
 
 ## How do I try Colony?
 
-Right now the easiest way to get started with Colony is by [installing our virtual Vagrant environment](../install/vagrant-install/) to see how quick and easy it is to use.
+Right now the easiest way to get started with Colony is by [installing our virtual Vagrant environment, which we walk through in the blog here](https://blog.konstruct.io/virtual-data-center/) to see how easy it is to install and use.
 
 After you complete the initial set up, you can use Colony to discover your assets and provision a cluster.
 

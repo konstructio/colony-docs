@@ -8,40 +8,6 @@ sidebar_position: 2
 
 After reviewing the [required prerequisites](../colony-prod/prereqs-colony.md), refer to the details below to install Colony.
 
-## Installing Required Packages
-
-    ```bash
-    apt update && apt install wget
-    ```
-
-Refer to [Docker Documentation](https://docs.docker.com/desktop/setup/install/linux/) for Docker’s system requirements.
-
-    ```bash
-    curl -fsSL https://get.docker.com -o get-docker.sh
-    sh get-docker.sh
-    ```
-
-Add your user to the Docker group. Skip this step if you are `root` user
-
-    ```bash
-    sudo usermod -aG docker $USER
-    ```
-
-After running the command you might need to exit your current session and start a new one. To test whether your user account has access to the Docker daemon,run:
-
-    ```bash
-    docker run docker.io/hello-world
-    ```
-
-Refer to the linked documentation for more post-installation [steps in Docker](https://docs.docker.com/engine/install/linux-postinstall/)
-
-For kubectl, use the following:
-
-    ```bash
-    wget "https://dl.k8s.io/release/v1.31.2/bin/linux/amd64/kubectl" sudo install -o kubectl /usr/bin/local
-    chmod 555 /usr/bin/local/kubectl
-    ```
-
 ## Installing Colony
 
 The following installation instructions apply to Colony version 0.02-rc1.
