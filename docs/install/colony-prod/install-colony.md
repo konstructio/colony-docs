@@ -39,12 +39,6 @@ The following installation instructions apply to Colony version `v0.2`.
     export KUBECONFIG=~/.colony/config
     ```
 
-To manually patch the colony-agent image until we publish a new release
-
-    ```bash
-    kubectl -n tink-system set image deployment/colony-colony-agent \
-    colony-agent=ghcr.io/konstructio/colony-agent:93fde8b
-    ```
 
 ### Items to Note
 
