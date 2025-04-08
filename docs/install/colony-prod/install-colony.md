@@ -39,7 +39,6 @@ The following installation instructions apply to Colony version `v0.2`.
     export KUBECONFIG=~/.colony/config
     ```
 
-
 ### Items to Note
 
     - `<interface>` refers to the interface connected to `network boot`.
