@@ -10,10 +10,10 @@ After reviewing the [required prerequisites](../colony-prod/prereqs-colony.md), 
 
 ## Step 1 - Installing Colony
 
-The following installation instructions apply to Colony version 0.02-rc1.
+The following installation instructions apply to Colony version `v0.2`.
 
     ```bash
-    git clone -b ipmi https://github.com/konstructio/colony.git
+    git clone https://github.com/konstructio/colony.git
     cd colony
     go build .
     ```
@@ -39,12 +39,6 @@ The following installation instructions apply to Colony version 0.02-rc1.
     export KUBECONFIG=~/.colony/config
     ```
 
-To manually patch the colony-agent image until we publish a new release
-
-    ```bash
-    kubectl -n tink-system set image deployment/colony-colony-agent \
-    colony-agent=ghcr.io/konstructio/colony-agent:93fde8b
-    ```
 
 ### Items to Note
 
