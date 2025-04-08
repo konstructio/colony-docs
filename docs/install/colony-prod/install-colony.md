@@ -10,7 +10,7 @@ After reviewing the [required prerequisites](../colony-prod/prereqs-colony.md), 
 
 ## Step 1 - Installing Colony
 
-The following installation instructions apply to Colony version 0.02-rc1.
+The following installation instructions apply to Colony version `v0.2`.
 
     ```bash
     git clone -b ipmi https://github.com/konstructio/colony.git
