@@ -13,7 +13,7 @@ After reviewing the [required prerequisites](../colony-prod/prereqs-colony.md), 
 The following installation instructions apply to Colony version `v0.2`.
 
     ```bash
-    git clone -b ipmi https://github.com/konstructio/colony.git
+    git clone https://github.com/konstructio/colony.git
     cd colony
     go build .
     ```
