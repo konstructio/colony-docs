@@ -15,12 +15,9 @@ If you're interested in using Colony and still have questions, we're here to hel
 
 # What is Colony?
 
-Colony is a bare metal provisioner and data center infrastructure management system. It's a cloud native microservice ecosystem with some components hosted in Konstruct and other components that run in your data centers.
+Colony is a bare metal provisioner and data center infrastructure management system. It's a cloud native microservice ecosystem with some components hosted in Civo and other components that run in your data centers.
 
 Colony provides you a way to easily manage bare metal OS provisioning and deprovisioning operations in your own data centers.
-
-- Read [our blog on Colony.](https://blog.konstruct.io/virtual-data-center/)
-- Check out [the Product page](https://konstruct.io/colony) to learn more and request a demo.
 
 ![Colony UI](./img/colony/colonylanding.png)
 

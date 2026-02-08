@@ -12,11 +12,23 @@ After reviewing the [required prerequisites](../colony-prod/prereqs-colony.md), 
 
 The following installation instructions apply to Colony version `v0.2`.
 
-    ```bash
-    git clone https://github.com/konstructio/colony.git
-    cd colony
-    go build .
-    ```
+Download and extract the Colony CLI:
+
+```bash
+curl -fsSL https://objectstore.nyc1.civo.com/konstruct-assets/colony/v0.2.4/colony_Linux_x86_64.tar.gz | tar xz
+```
+
+Verify the binary works:
+
+```bash
+colony version
+```
+
+Move to your PATH:
+
+```bash
+sudo mv colony /usr/local/bin/
+```
 
 ## Step 2 - Create Your API Key
 
@@ -28,36 +40,38 @@ The following installation instructions apply to Colony version `v0.2`.
 
 ## Step 3 - Run the Colony `init`
 
-    ```bash
-    ./colony init \
-    --api-key $YOUR_COLONY_API_KEY \
-    --load-balancer-interface <asset-managment-interface> \
-    --load-balancer-ip <ip-address>
-    ```
- 
-    ```bash
-    export KUBECONFIG=~/.colony/config
-    ```
+```bash
+colony init \
+  --api-key <from-ui> \
+  --data-center-id <from-ui> \
+  --load-balancer-interface <asset-management-interface> \
+  --load-balancer-ip <ip-address>
+```
+
+```bash
+export KUBECONFIG=~/.colony/config
+```
 
 ### Items to Note
 
-    - `<interface>` refers to the interface connected to `network boot`.
-    - The IP address should be in the same subnet as the assets being discovered.
+- `<interface>` refers to the interface connected to `network boot`
+- The IP address should be in the same subnet as the assets being discovered
     - This is the address of the `next-server` (tftp server). Refer to the following to [generate API keys](https://colony.konstruct.io/docs/install/virtual-install)
 
 ## Step 4 - Asset Discovery
 
-To discover an asset run:
+Power on your assets to auto-discover. Use `ipmitool` for power management:
 
-    ```bash
-    ./colony add-ipmi \
-    --ip <asset-managment-address> \
-    --username <username> \
-    --password <ipmi-password> \
-    --auto-discover
-    ```
+```bash
+# Check power status
+ipmitool -H <ipmi-ip> -I lanplus -U <username> -P <password> power status
 
-The new asset will appear under the assets tab in the Colony UI.
+# Set PXE boot and power on
+ipmitool -H <ipmi-ip> -I lanplus -U <username> -P <password> chassis bootdev pxe
+ipmitool -H <ipmi-ip> -I lanplus -U <username> -P <password> power on
+```
+
+Assets will PXE boot and automatically appear in the Colony UI.
 
 ## Step 5 - Adding a Cluster
 
