@@ -30,6 +30,7 @@ Your assets must have IPMI/BMC (Baseboard Management Controller) configured:
 - **Network Access**: Management cluster can reach IPMI IPs
 
 Common IPMI implementations:
+
 - Dell: iDRAC
 - HP: iLO
 - Supermicro: IPMI
@@ -155,6 +156,7 @@ discovering → available → provisioning → provisioned
 **Symptoms**: Asset doesn't appear in UI or kubectl after `add-ipmi`.
 
 **Solutions**:
+
 - Verify IPMI IP is correct and pingable: `ping 192.168.2.50`
 - Check IPMI credentials are correct (try web interface: `https://192.168.2.50`)
 - Ensure management cluster can reach IPMI network (may need routing)
@@ -166,6 +168,7 @@ discovering → available → provisioning → provisioned
 **Symptoms**: Asset remains in "discovering" status for >15 minutes.
 
 **Solutions**:
+
 - Check if asset powered on: verify via IPMI web interface or `ipmitool`
 - Ensure PXE boot is enabled in BIOS/UEFI
 - Verify DHCP server is responding to PXE requests
@@ -178,6 +181,7 @@ discovering → available → provisioning → provisioned
 **Symptoms**: Error: "unable to authenticate" or "invalid credentials".
 
 **Solutions**:
+
 - Verify username and password in IPMI web interface
 - Check for special characters in password (may need escaping)
 - Some IPMI systems use different default users (ADMIN, admin, root)
@@ -189,6 +193,7 @@ discovering → available → provisioning → provisioned
 **Symptoms**: Asset doesn't PXE boot, boots to existing OS or "no bootable device".
 
 **Solutions**:
+
 - Enable PXE boot in BIOS/UEFI boot settings
 - Set boot order: Network → Disk (or use one-time boot menu)
 - Verify correct network interface is set for PXE (usually first onboard NIC)
@@ -200,6 +205,7 @@ discovering → available → provisioning → provisioned
 **Symptoms**: After PXE boot, asset gets no IP or wrong subnet.
 
 **Solutions**:
+
 - Verify asset is connected to correct network (same as management cluster)
 - Check DHCP server has available leases
 - Ensure network switch ports are in correct VLAN (untagged)
@@ -211,6 +217,7 @@ discovering → available → provisioning → provisioned
 **Symptoms**: Asset shows in UI but missing CPUs, RAM, disks, or NICs.
 
 **Solutions**:
+
 - Wait longer (full hardware inventory can take 5-10 minutes)
 - Check asset console via IPMI for error messages
 - Verify hardware is properly seated (reseat RAM, drives if accessible)

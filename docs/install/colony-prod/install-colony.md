@@ -56,7 +56,7 @@ export KUBECONFIG=~/.colony/config
 
 - `<interface>` refers to the interface connected to `network boot`
 - The IP address should be in the same subnet as the assets being discovered
-    - This is the address of the `next-server` (tftp server). Refer to the following to [generate API keys](https://colony.konstruct.io/docs/install/virtual-install)
+  - This is the address of the `next-server` (tftp server). Refer to the following to [generate API keys](https://colony.konstruct.io/docs/install/virtual-install)
 
 ## Step 4 - Asset Discovery
 

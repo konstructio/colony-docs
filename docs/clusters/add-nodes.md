@@ -112,6 +112,7 @@ kubectl get events --sort-by='.lastTimestamp'
 **Symptoms**: New node doesn't appear in `kubectl get nodes`.
 
 **Solutions**:
+
 - Verify asset provisioning completed successfully
 - Check network connectivity to control plane
 - Review colony-agent logs
@@ -123,6 +124,7 @@ kubectl get events --sort-by='.lastTimestamp'
 **Symptoms**: Node appears but stays NotReady.
 
 **Solutions**:
+
 - For Talos Linux: Ensure CNI is installed
 - Check kubelet logs: `kubectl logs -n kube-system kubelet-<node>`
 - Verify node can reach API server
@@ -133,6 +135,7 @@ kubectl get events --sort-by='.lastTimestamp'
 **Symptoms**: Pods don't schedule to new nodes.
 
 **Solutions**:
+
 - Check node taints: `kubectl describe node <node-name>`
 - Verify node has sufficient resources
 - Check pod resource requests match node capacity

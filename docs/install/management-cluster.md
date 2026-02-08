@@ -42,6 +42,7 @@ colony init \
 - `--load-balancer-ip`: Static IP in the same subnet as your assets for colony to use
 
 Example:
+
 ```bash
 colony init \
   --api-key cd-c1d1e981b67e_30204cc8faf061722004fe7641ed381b94eae5b5 \

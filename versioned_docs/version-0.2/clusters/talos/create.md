@@ -107,6 +107,7 @@ For each control plane node, enter:
 ```
 
 Common values:
+
 - `/dev/sda` - First SATA/SCSI disk
 - `/dev/nvme0n1` - First NVMe disk
 - `/dev/vda` - First virtio disk (VMs)
@@ -187,11 +188,13 @@ After provisioning completes, the cluster is NOT fully functional. You must inst
 Watch provisioning in real-time:
 
 **Colony UI**:
+
 - Cluster status shows current stage
 - Progress bar indicates completion percentage
 - Logs available in cluster details
 
 **kubectl** (from management cluster):
+
 ```bash
 # Watch colony-agent logs
 kubectl logs -n colony -l app=colony-agent -f
@@ -226,6 +229,7 @@ kubectl get nodes
 ```
 
 Expected output (nodes will be NotReady without CNI):
+
 ```
 NAME                    STATUS     ROLES           AGE   VERSION
 control-plane-01        NotReady   control-plane   5m    v1.29.0
@@ -312,6 +316,7 @@ kubectl get nodes
 ```
 
 Expected output:
+
 ```
 NAME                    STATUS   ROLES           AGE   VERSION
 control-plane-01        Ready    control-plane   8m    v1.29.0
@@ -411,6 +416,7 @@ Talos has NO SSH access. All management is via `talosctl` API. This ensures immu
 **Symptoms**: Assets don't boot from network, provisioning times out.
 
 **Solutions**:
+
 - Verify DHCP server is running and configured with PXE settings
 - Check TFTP server is reachable: `tftp <load-balancer-ip>`
 - Confirm assets have PXE boot enabled in BIOS/UEFI
@@ -421,6 +427,7 @@ Talos has NO SSH access. All management is via `talosctl` API. This ensures immu
 **Symptoms**: Some nodes show in Talos but not `kubectl get nodes`.
 
 **Solutions**:
+
 - Check node status in Talos: `talosctl --talosconfig ~/.talos/config get members --nodes <control-plane-ip>`
 - Verify static IPs are correct and pingable
 - Ensure firewall allows port 6443 (API server) and 50000-50001 (Talos API)
@@ -431,6 +438,7 @@ Talos has NO SSH access. All management is via `talosctl` API. This ensures immu
 **Symptoms**: `kubectl` commands timeout or refuse connection.
 
 **Solutions**:
+
 - Verify kubeconfig uses correct IP and port
 - Check control plane nodes are healthy: `talosctl --talosconfig ~/.talos/config services --nodes <control-plane-ip>`
 - Ensure port 6443 is not blocked by firewall
@@ -441,6 +449,7 @@ Talos has NO SSH access. All management is via `talosctl` API. This ensures immu
 **Symptoms**: CNI pods in Pending or CrashLoopBackOff.
 
 **Solutions**:
+
 - Check node resources: `kubectl describe nodes`
 - Verify CNI manifest is correct for Talos (some CNIs need Talos-specific configs)
 - Check CNI pod logs: `kubectl logs -n <cni-namespace> <pod-name>`
@@ -451,6 +460,7 @@ Talos has NO SSH access. All management is via `talosctl` API. This ensures immu
 **Symptoms**: Pods can't resolve DNS names.
 
 **Solutions**:
+
 - Install CoreDNS (usually comes with Kubernetes, but verify): `kubectl get pods -n kube-system -l k8s-app=kube-dns`
 - Check CoreDNS is running: `kubectl logs -n kube-system -l k8s-app=kube-dns`
 - Verify CNI is installed and working

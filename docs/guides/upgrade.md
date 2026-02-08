@@ -92,6 +92,7 @@ talosctl --talosconfig ~/.talos/config upgrade-k8s \
 ```
 
 **Process**:
+
 1. Upgrade control planes one at a time
 2. Wait for each to become Ready
 3. Upgrade workers in rolling fashion
@@ -113,6 +114,7 @@ sudo systemctl restart k3s-agent
 ```
 
 **Process**:
+
 1. Upgrade control planes first (one at a time if HA)
 2. Wait for control planes to stabilize
 3. Upgrade workers
@@ -133,6 +135,7 @@ cp ~/.colony/config ~/.colony/config.bak
 ### Provisioned Clusters
 
 **Talos**:
+
 ```bash
 # Backup etcd
 talosctl --talosconfig ~/.talos/config -n <control-plane-ip> \
@@ -144,6 +147,7 @@ talosctl --talosconfig ~/.talos/config -n <control-plane-ip> \
 ```
 
 **K3s**:
+
 ```bash
 # Backup from control plane
 ssh kbot@<control-plane-ip> \
@@ -160,6 +164,7 @@ scp kbot@<control-plane-ip>:/tmp/k3s-backup.tar.gz ./
 If upgrade fails:
 
 1. Restore K3s backup:
+
    ```bash
    sudo systemctl stop k3s
    sudo rm -rf /var/lib/rancher/k3s
@@ -168,6 +173,7 @@ If upgrade fails:
    ```
 
 2. Restore kubeconfig:
+
    ```bash
    cp ~/.colony/config.bak ~/.colony/config
    ```
@@ -175,6 +181,7 @@ If upgrade fails:
 ### Provisioned Clusters
 
 **Talos**: Rollback upgrade:
+
 ```bash
 talosctl --talosconfig ~/.talos/config upgrade \
   --nodes <node-ip> \

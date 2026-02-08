@@ -9,6 +9,7 @@ sidebar_position: 1
 The Colony CLI is a command-line tool for managing bare metal infrastructure, provisioning clusters, and interacting with the Colony API.
 
 The Colony CLI provides commands for:
+
 - Initializing management clusters
 - Discovering and managing hardware assets
 - Provisioning operating systems
@@ -47,6 +48,7 @@ colony version
 ```
 
 **Expected output:**
+
 ```
 colony version v0.2.4
 ```
@@ -80,11 +82,13 @@ cd ~ && colony version
 If the `colony` command is not found after installation:
 
 Check that `/usr/local/bin` is in your PATH:
+
 ```bash
 echo $PATH | grep -o '/usr/local/bin'
 ```
 
 If not found, add it to your shell profile:
+
 ```bash
 echo 'export PATH="$PATH:/usr/local/bin"' >> ~/.bashrc
 source ~/.bashrc
@@ -96,10 +100,13 @@ If the download fails with a network error:
 
 1. Check your internet connection
 2. Verify you can access the URL:
+
    ```bash
    curl -I https://objectstore.nyc1.civo.com/konstruct-assets/colony/v0.2.4/colony_Linux_x86_64.tar.gz
    ```
+
 3. Try downloading to a file first:
+
    ```bash
    curl -fsSL https://objectstore.nyc1.civo.com/konstruct-assets/colony/v0.2.4/colony_Linux_x86_64.tar.gz -o colony.tar.gz
    tar xzf colony.tar.gz

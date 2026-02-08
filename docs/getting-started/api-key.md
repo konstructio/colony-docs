@@ -29,6 +29,7 @@ The API key serves these functions:
    - **Google**: Sign in with your Google account
 
 First-time login automatically creates:
+
 - Your user account
 - A default datacenter
 - A unique datacenter ID
@@ -58,10 +59,12 @@ colony init \
 ```
 
 Replace:
+
 - `vlan1001` with your asset management network interface
 - `10.1.1.5` with a static IP in the same subnet as your assets for colony to use
 
 Example:
+
 ```bash
 colony init \
   --api-key cd-c1d1e981b67e_30204cc8faf061722004fe7641ed381b94eae5b5 \
@@ -105,6 +108,7 @@ Each datacenter gets its own API key and agent ID during creation. Generate a se
 **Symptoms**: Agent fails to authenticate with "invalid API key" error.
 
 **Solutions**:
+
 - Verify you copied the complete key (no truncation)
 - Check for extra spaces or newlines in key string
 - Ensure key hasn't been revoked in UI
@@ -128,6 +132,7 @@ Each datacenter gets its own API key and agent ID during creation. Generate a se
 **Symptoms**: Agent logs show "connection refused" or timeout errors.
 
 **Solutions**:
+
 - Verify management cluster has internet access: `curl https://colony.konstruct.io`
 - Check firewall allows HTTPS (443) outbound
 - Ensure DNS resolves colony.konstruct.io: `nslookup colony.konstruct.io`

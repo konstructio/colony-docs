@@ -61,6 +61,7 @@ No SSH is ever enabled. All management is via the Talos API using `talosctl`.
 ## Why Choose Talos Linux?
 
 **Choose Talos Linux for:**
+
 - Standard Kubernetes without vendor lock-in
 - Maximum security with immutable infrastructure
 - Full control over CNI, CSI, and all add-ons
@@ -68,11 +69,13 @@ No SSH is ever enabled. All management is via the Talos API using `talosctl`.
 - Evaluating Talos without vendor features
 
 **Choose Civo Stack instead if:**
+
 - You want everything pre-configured and managed
 - You need enterprise features (autopilot, integrated observability)
 - You prefer faster time-to-production
 
 **Choose K3s instead if:**
+
 - You need SSH access for debugging
 - You want components included (Traefik, local storage)
 - You prefer a familiar Ubuntu environment
@@ -88,6 +91,7 @@ The create guide walks you through selecting assets, configuring networking, and
 Once your cluster is provisioned:
 
 **1. Download configs**:
+
 ```bash
 # From Colony UI, download kubeconfig and talosconfig
 export KUBECONFIG=~/talos-cluster-config
@@ -95,12 +99,14 @@ export TALOSCONFIG=~/.talos/config
 ```
 
 **2. Verify cluster** (nodes will be NotReady without CNI):
+
 ```bash
 kubectl get nodes
 # All nodes show NotReady - this is expected
 ```
 
 **3. Install CNI** (required):
+
 ```bash
 # Example: Flannel
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
@@ -110,6 +116,7 @@ kubectl get nodes --watch
 ```
 
 **4. Deploy workloads**:
+
 ```bash
 kubectl create deployment nginx --image=nginx
 kubectl get pods

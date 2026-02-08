@@ -73,6 +73,7 @@ Watch the provisioning progress:
 ![Ubuntu provisioning in progress](../img/templates/ubuntu/provisioning.png)
 
 Progress stages:
+
 1. PXE boot and Ubuntu installer download
 2. Disk partitioning and OS installation
 3. Cloud-init configuration
@@ -113,6 +114,7 @@ ssh ubuntu@<asset-ip>
 ```
 
 Default credentials:
+
 - **Username**: `ubuntu`
 - **Password**: `ubuntu`
 
@@ -299,6 +301,7 @@ Wiping a disk is destructive and irreversible. All data will be permanently dele
 **Symptoms**: Asset stuck in "provisioning" status or returns to "available" with error.
 
 **Solutions**:
+
 - Check Tinkerbell workflow logs: `kubectl get workflows -A`
 - Verify DHCP server is responding to PXE requests
 - Ensure TFTP server is reachable from asset
@@ -310,6 +313,7 @@ Wiping a disk is destructive and irreversible. All data will be permanently dele
 **Symptoms**: Can't connect to asset after provisioning.
 
 **Solutions**:
+
 - Verify asset status is "provisioned" (not "provisioning")
 - Check asset IP is correct and pingable: `ping <asset-ip>`
 - Ensure SSH port (22) is not blocked by firewall
@@ -321,6 +325,7 @@ Wiping a disk is destructive and irreversible. All data will be permanently dele
 **Symptoms**: Asset has unexpected IP or no IP.
 
 **Solutions**:
+
 - Check DHCP server configuration and lease table
 - Verify network interface is connected to correct VLAN
 - Check cloud-init network configuration
@@ -331,6 +336,7 @@ Wiping a disk is destructive and irreversible. All data will be permanently dele
 **Symptoms**: `/` filesystem is too small, or partitions are wrong size.
 
 **Solutions**:
+
 - Wipe asset and re-provision
 - Customize cloud-init to modify partitioning (advanced)
 - Check disk size is sufficient (minimum 20GB, recommended 64GB+)
@@ -340,6 +346,7 @@ Wiping a disk is destructive and irreversible. All data will be permanently dele
 **Symptoms**: `apt install` fails with errors.
 
 **Solutions**:
+
 - Update package lists: `sudo apt update`
 - Check internet connectivity: `ping 8.8.8.8`
 - Verify DNS works: `nslookup ubuntu.com`

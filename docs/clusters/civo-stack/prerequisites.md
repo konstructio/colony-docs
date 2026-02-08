@@ -11,10 +11,12 @@ Before creating a Civo Stack cluster, ensure you have all required assets, crede
 ## Assets
 
 **Minimum 5 assets required:**
+
 - **3 control plane nodes** - High availability Kubernetes control plane
 - **2 worker nodes** - Distributed storage (Mayastor/CEPH) requires minimum 2 workers
 
 Each asset must:
+
 - Be in **"available"** status (auto-discovered)
 - Have 32+ GB RAM, 24+ CPU cores, 1TB+ disk
 - Support PXE boot on the management network
@@ -39,21 +41,25 @@ Keep credentials secure. Store in password manager or secrets management system.
 ### Credential Format
 
 **GitLab Token**:
+
 ```
 glpat-xxxxxxxxxxxxxxxxxxxx
 ```
 
 **Image Pull Secret** (base64-encoded Docker config):
+
 ```
 eyJhdXRocyI6eyJnY3IuaW8iOnsidXNlcm5hbWUiOiJfanNvbl9rZXki...
 ```
 
 **Civo API Token**:
+
 ```
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 **Region**:
+
 ```
 PHX1
 ```
@@ -82,6 +88,7 @@ Talos uses specific ports for cluster communication:
 - **50000**: Talos API (apid)
 - **50001**: Talos trustd
 - **Flannel/CNI**: UDP 8472 (VXLAN), UDP 4789 (Geneve)
+
 :::
 
 ### Network Topology Example

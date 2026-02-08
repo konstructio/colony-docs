@@ -15,6 +15,7 @@ This guide covers common issues and debugging techniques for Colony.
 **Symptoms**: Initialization fails with errors.
 
 **Common causes**:
+
 - Docker not running
 - Ports in use (80, 443, 6443, 69)
 - Interface doesn't exist or is down
@@ -60,6 +61,7 @@ kubectl describe nodes
 ```
 
 Common issues:
+
 - Insufficient resources (need 8GB RAM, 4 CPUs)
 - Image pull failures (check internet connectivity)
 - Volume mount issues (check disk space)
@@ -172,6 +174,7 @@ sudo journalctl -u k3s -f
    - Check DHCP leases
 
 2. **Verify TFTP**:
+
    ```bash
    # Test TFTP from another machine
    tftp <load-balancer-ip>
@@ -218,6 +221,7 @@ kubectl logs -n kube-system -l component=kube-apiserver
 **Solutions**:
 
 **For Talos Linux**: Install CNI
+
 ```bash
 # Flannel
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
@@ -227,6 +231,7 @@ cilium install
 ```
 
 **For other issues**:
+
 ```bash
 # Check kubelet
 kubectl describe node <node-name>

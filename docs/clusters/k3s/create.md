@@ -155,11 +155,13 @@ Your cluster will progress through these stages:
 Watch provisioning in real-time:
 
 **Colony UI**:
+
 - Cluster status shows current stage
 - Progress bar indicates completion percentage
 - Logs available in cluster details
 
 **kubectl** (from management cluster):
+
 ```bash
 # Watch colony-agent logs
 kubectl logs -n colony -l app=colony-agent -f
@@ -167,7 +169,6 @@ kubectl logs -n colony -l app=colony-agent -f
 # Check workflows
 kubectl get workflows -A
 ```
-
 
 ## Verification
 
@@ -192,6 +193,7 @@ kubectl get nodes
 ```
 
 Expected output:
+
 ```
 NAME                    STATUS   ROLES                  AGE   VERSION
 control-plane-01        Ready    control-plane,master   10m   v1.28.5+k3s1
@@ -208,6 +210,7 @@ kubectl get pods -A
 ```
 
 Look for:
+
 - `kube-system`: CoreDNS, metrics-server, local-path-provisioner
 - `kube-system`: Traefik (ingress controller)
 
@@ -343,6 +346,7 @@ No additional installation required!
 **Symptoms**: Worker nodes don't appear in `kubectl get nodes`.
 
 **Solutions**:
+
 - Check colony-agent logs: `kubectl logs -n colony -l app=colony-agent`
 - Verify control plane IP is reachable from workers
 - Ensure port 6443 is open from workers to control plane
@@ -354,6 +358,7 @@ No additional installation required!
 **Symptoms**: CoreDNS in CrashLoopBackOff or Pending.
 
 **Solutions**:
+
 - Check CoreDNS logs: `kubectl logs -n kube-system -l k8s-app=kube-dns`
 - Verify network plugin (Flannel) is running: `kubectl get pods -n kube-system -l app=flannel`
 - Ensure nodes have sufficient resources: `kubectl describe node`
@@ -365,6 +370,7 @@ No additional installation required!
 **Symptoms**: Ingress doesn't route traffic, Traefik service unreachable.
 
 **Solutions**:
+
 - Check Traefik is running: `kubectl get pods -n kube-system -l app.kubernetes.io/name=traefik`
 - Verify Traefik service: `kubectl get svc -n kube-system traefik`
 - Check Traefik logs: `kubectl logs -n kube-system -l app.kubernetes.io/name=traefik`
@@ -376,6 +382,7 @@ No additional installation required!
 **Symptoms**: Cluster provisioning fails with SSH key upload error.
 
 **Solutions**:
+
 - Verify public key format (should start with `ssh-rsa`, `ssh-ed25519`, etc.)
 - Check SSH access to nodes manually: `ssh ubuntu@<node-ip>`
 - Ensure `.ssh/authorized_keys` is writable on nodes

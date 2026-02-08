@@ -30,21 +30,25 @@ See [Create API Key](../getting-started/api-key.md) for obtaining credentials.
 ### Assets
 
 **List Assets**:
+
 ```
 GET /api/v1/assets
 ```
 
 **Get Asset Details**:
+
 ```
 GET /api/v1/assets/{id}
 ```
 
 **Provision Asset**:
+
 ```
 POST /api/v1/assets/{id}/provision
 ```
 
 **Wipe Asset**:
+
 ```
 POST /api/v1/assets/{id}/wipe
 ```
@@ -52,26 +56,31 @@ POST /api/v1/assets/{id}/wipe
 ### Clusters
 
 **List Clusters**:
+
 ```
 GET /api/v1/clusters
 ```
 
 **Create Cluster**:
+
 ```
 POST /api/v1/clusters
 ```
 
 **Get Cluster Details**:
+
 ```
 GET /api/v1/clusters/{id}
 ```
 
 **Delete Cluster**:
+
 ```
 DELETE /api/v1/clusters/{id}
 ```
 
 **Download Kubeconfig**:
+
 ```
 GET /api/v1/clusters/{id}/kubeconfig
 ```
@@ -79,11 +88,13 @@ GET /api/v1/clusters/{id}/kubeconfig
 ### Workflows
 
 **List Workflows**:
+
 ```
 GET /api/v1/workflows
 ```
 
 **Get Workflow Status**:
+
 ```
 GET /api/v1/workflows/{id}
 ```
@@ -100,6 +111,7 @@ curl -X POST https://colony.konstruct.io/api/v1/clusters \
 ```
 
 **cluster-config.json**:
+
 ```json
 {
   "name": "production-cluster",
@@ -137,6 +149,7 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
 ```
 
 **Response**:
+
 ```json
 {
   "assets": [
@@ -175,6 +188,7 @@ Standard HTTP status codes:
 - `500` - Internal Server Error
 
 Error response format:
+
 ```json
 {
   "error": "Asset not found",

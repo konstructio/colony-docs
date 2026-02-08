@@ -82,13 +82,16 @@ Generic Talos-based Kubernetes without vendor-specific finalization. Provides fl
 ### Additional Requirements by Type
 
 **Civo Stack**:
+
 - [ ] **5 minimum assets** (3 control planes + 2 workers)
 - [ ] Civo Stack credentials ([contact your account manager](https://www.civo.com/contact))
 
 **K3s**:
+
 - No additional requirements
 
 **Talos Linux**:
+
 - No additional requirements
 
 ## Provisioning Methods
@@ -117,17 +120,20 @@ Once your cluster is provisioned:
 ### Common Issues
 
 **Assets not available**:
+
 - Check asset status in UI (must be "available", not "discovering" or "provisioning")
 - Verify IPMI connectivity with `ipmitool -H <ipmi-ip> -I lanplus -U admin -P $PASS power status`
 - Ensure assets are powered on and PXE booted
 
 **Provisioning stuck**:
+
 - Check workflow status in Colony UI
 - Review colony-agent logs: `kubectl logs -n colony <agent-pod>`
 - Verify network connectivity to PXE server
 - Check Tinkerbell workflow logs: `kubectl logs -n tinkerbell <pod-name>`
 
 **Cluster not reachable**:
+
 - Verify kubeconfig downloaded correctly
 - Check static IPs are pingable from management cluster
 - Ensure firewall rules allow API server port (6443)

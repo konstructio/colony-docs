@@ -19,6 +19,7 @@ Civo Stack Enterprise transforms your bare metal infrastructure into a complete 
 A complete private cloud platform with:
 
 **Compute & Workloads**
+
 - Live VM migration with zero downtime
 - Native Kubernetes clusters
 - Windows and Linux multi-tenancy
@@ -26,17 +27,20 @@ A complete private cloud platform with:
 - Serverless and containerized applications
 
 **Storage & Data**
+
 - Object storage for backups and artifacts
 - Block storage for persistent volumes
 - DBaaS (managed MySQL, PostgreSQL)
 
 **Management**
+
 - Centralized web dashboard
 - Infrastructure as Code (API, CLI, Terraform)
 - Automated updates and security patches
 - Hybrid cloud integration (AWS, Azure, GCP)
 
 **Enterprise Features**
+
 - 24/7 enterprise support
 - SOC 2, ISO 27001 certified
 - VMware migration tools included
@@ -57,6 +61,7 @@ To create a Civo Stack cluster, you need:
 ## Why Choose Civo Stack?
 
 **Choose Civo Stack for:**
+
 - Complete private cloud platform (compute, storage, databases)
 - Live VM migration and enterprise features
 - Multi-tenancy and hybrid cloud requirements
@@ -64,11 +69,13 @@ To create a Civo Stack cluster, you need:
 - Production workloads requiring managed services
 
 **Consider K3s instead for:**
+
 - Development and testing environments
 - Lightweight Kubernetes without VMs
 - Edge deployments with minimal infrastructure
 
 **Consider Talos Linux instead for:**
+
 - Kubernetes-only deployments (no VMs)
 - Maximum customization and flexibility
 - Generic infrastructure without vendor services

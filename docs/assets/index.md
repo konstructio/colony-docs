@@ -51,11 +51,13 @@ Register new hardware with IPMI credentials:
 Install operating systems on assets:
 
 **Ubuntu 22.04**:
+
 - Use for K3s clusters or standalone servers
 - Provides SSH access
 - [Provision Ubuntu Guide →](./provision-ubuntu.md)
 
 **Talos Linux**:
+
 - Used automatically by Civo Stack and Talos Linux clusters
 - No manual provisioning needed
 - [Civo Stack →](../clusters/civo-stack/index.md) | [Talos Linux →](../clusters/talos/index.md)
@@ -147,6 +149,7 @@ Organize assets with metadata:
 - **Maintenance**: Next service date
 
 This helps with:
+
 - Resource allocation
 - Capacity planning
 - Troubleshooting
@@ -185,6 +188,7 @@ kubectl describe hardware -n <namespace> <hardware-name>
 **Symptoms**: Asset doesn't appear after `add-ipmi`.
 
 **Solutions**:
+
 - Verify IPMI connectivity: `ping <ipmi-ip>`
 - Check credentials in IPMI web interface
 - Ensure PXE boot is enabled
@@ -195,6 +199,7 @@ kubectl describe hardware -n <namespace> <hardware-name>
 **Symptoms**: Asset remains in same status for extended period.
 
 **Solutions**:
+
 - **discovering**: Check PXE boot, DHCP, TFTP server
 - **provisioning**: Review Tinkerbell workflow logs
 - **deprovisioning**: May be slow for large disks, wait longer or power cycle
@@ -204,6 +209,7 @@ kubectl describe hardware -n <namespace> <hardware-name>
 **Symptoms**: Wipe operation fails or doesn't start.
 
 **Solutions**:
+
 - Ensure asset is in "provisioned" status
 - Check IPMI connectivity
 - Verify management cluster can reach asset

@@ -57,6 +57,7 @@ To summarize networking requirements:
 - Interface connected to out-of-band network and private network should be untagged
 - DHCP server running on network boot subnet
 - Internet access to registries and package repos
+
 :::
 
 ### Port Requirements
@@ -141,6 +142,7 @@ ip addr show
 ```
 
 You'll need:
+
 - **Interface name** (e.g., `eth0`, `ens192`)
 - **IP address** in the same subnet as your assets
 - **Subnet mask** (e.g., `/24` for 255.255.255.0)

@@ -48,17 +48,20 @@ When you create a K3s cluster, Colony:
 ## Why Choose K3s?
 
 **Choose K3s for:**
+
 - Development and testing environments
 - Edge deployments with limited resources
 - Fast iteration cycles (10-15 minute provisioning)
 - Lightweight Kubernetes footprint
 
 **Consider Civo Stack instead if:**
+
 - You need enterprise features (autopilot, integrated observability)
 - You want a complete private cloud platform
 - You prefer immutable infrastructure (Talos)
 
 **Consider Talos Linux instead if:**
+
 - You want standard Kubernetes without pre-installed components
 - You prefer API-managed, immutable infrastructure
 - You need maximum security with immutable OS
@@ -74,6 +77,7 @@ The create guide walks you through selecting assets, configuring networking, and
 Once your cluster is provisioned, you can:
 
 **Access via kubectl**:
+
 ```bash
 # Download kubeconfig from Colony UI
 export KUBECONFIG=~/k3s-cluster-config
@@ -81,12 +85,14 @@ kubectl get nodes
 ```
 
 **Deploy workloads**:
+
 ```bash
 kubectl create deployment nginx --image=nginx
 kubectl expose deployment nginx --port=80 --type=LoadBalancer
 ```
 
 **Use Traefik ingress**:
+
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress

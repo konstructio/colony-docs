@@ -106,6 +106,7 @@ For each control plane node, enter:
 ```
 
 Common values:
+
 - `/dev/sda` - First SATA/SCSI disk
 - `/dev/nvme0n1` - First NVMe disk
 - `/dev/vda` - First virtio disk (VMs)
@@ -258,11 +259,13 @@ Your cluster will progress through these stages:
 Watch provisioning in real-time:
 
 **Colony UI**:
+
 - Cluster status shows current stage
 - Progress bar indicates completion percentage
 - Logs available in cluster details
 
 **kubectl** (from management cluster):
+
 ```bash
 # Watch colony-agent logs
 kubectl logs -n colony -l app=colony-agent -f
@@ -299,6 +302,7 @@ kubectl get nodes
 ```
 
 Expected output:
+
 ```
 NAME                    STATUS   ROLES           AGE   VERSION
 control-plane-01        Ready    control-plane   10m   v1.29.0
@@ -316,6 +320,7 @@ kubectl get pods -A
 ```
 
 Look for:
+
 - `kube-system`: CoreDNS, kube-proxy, Flannel
 - `cse-installer`: CSE installer job (Completed)
 - `civo-system`: Autopilot, monitoring agents (if applicable)
@@ -387,6 +392,7 @@ Talos has no SSH access. All management is via API using talosctl. This ensures 
 **Symptoms**: Assets don't boot from network, provisioning times out.
 
 **Solutions**:
+
 - Verify DHCP server is running and configured with PXE settings
 - Check TFTP server is reachable from assets: `tftp <load-balancer-ip>`
 - Confirm assets have PXE boot enabled in BIOS/UEFI
@@ -398,6 +404,7 @@ Talos has no SSH access. All management is via API using talosctl. This ensures 
 **Symptoms**: CSE installer job shows Error or CrashLoopBackOff.
 
 **Solutions**:
+
 - Verify credentials are correct (GitLab token, image pull secret, API token)
 - Check image pull secret format (must be base64-encoded Docker config JSON)
 - Ensure cluster has internet access to pull images from gcr.io or private registry
@@ -409,6 +416,7 @@ Talos has no SSH access. All management is via API using talosctl. This ensures 
 **Symptoms**: Some nodes show in Talos but not `kubectl get nodes`.
 
 **Solutions**:
+
 - Check node status in Talos: `talosctl get members --nodes <control-plane-ip>`
 - Verify static IPs are correct and pingable
 - Ensure firewall allows port 6443 (API server) and 50000-50001 (Talos API)
@@ -420,6 +428,7 @@ Talos has no SSH access. All management is via API using talosctl. This ensures 
 **Symptoms**: `kubectl` commands timeout or refuse connection.
 
 **Solutions**:
+
 - Verify kubeconfig uses correct IP and port
 - Check control plane nodes are healthy: `talosctl services --nodes <control-plane-ip>`
 - Ensure port 6443 is not blocked by firewall
@@ -431,6 +440,7 @@ Talos has no SSH access. All management is via API using talosctl. This ensures 
 **Symptoms**: Autopilot ConfigMap or gcr-mirror-pull secrets not found.
 
 **Solutions**:
+
 - Check CSE installer job succeeded: `kubectl get jobs -A | grep cse-installer`
 - Review installer logs for errors: `kubectl logs -n <namespace> -l job-name=cse-installer`
 - Verify image pull secret is valid and not expired
@@ -498,6 +508,7 @@ kubectl get configmap -n kube-system autopilot-config -o yaml
 ```
 
 Autopilot manages:
+
 - Automatic updates
 - Self-healing
 - Policy enforcement
