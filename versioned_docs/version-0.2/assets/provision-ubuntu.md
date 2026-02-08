@@ -111,7 +111,7 @@ Connect to the provisioned host:
 
 ```bash
 ssh ubuntu@<asset-ip>
-```text
+```
 
 Default credentials:
 
@@ -150,7 +150,7 @@ nslookup google.com
 # Check SSH service
 systemctl status sshd
 # Should be active (running)
-```text
+```
 
 ## Access Ubuntu Host
 
@@ -161,7 +161,7 @@ After provisioning completes, you have full SSH access:
 ```bash
 ssh ubuntu@192.168.1.50
 # Password: ubuntu
-```text
+```
 
 ### SSH with Key (After Setup)
 
@@ -171,7 +171,7 @@ ssh ubuntu@192.168.1.50 "mkdir -p ~/.ssh && echo 'YOUR_PUBLIC_KEY' >> ~/.ssh/aut
 
 # Connect with key
 ssh -i ~/.ssh/id_rsa ubuntu@192.168.1.50
-```text
+```
 
 ### Become Root
 
@@ -181,7 +181,7 @@ sudo su -
 
 # Or run commands with sudo
 sudo apt update
-```text
+```
 
 ## Post-Provisioning Configuration
 
@@ -190,7 +190,7 @@ sudo apt update
 ```bash
 sudo apt update
 sudo apt upgrade -y
-```text
+```
 
 ### Install Additional Software
 
@@ -204,7 +204,7 @@ sudo usermod -aG docker ubuntu
 
 # Other packages
 sudo apt install -y vim tmux htop
-```text
+```
 
 ### Configure SSH Keys
 
@@ -217,7 +217,7 @@ ssh-copy-id ubuntu@<asset-ip>
 
 # Test key-based auth
 ssh ubuntu@<asset-ip>
-```text
+```
 
 ### Set Hostname
 
@@ -227,7 +227,7 @@ sudo hostnamectl set-hostname myserver.example.com
 
 # Update /etc/hosts
 echo "192.168.1.50 myserver.example.com myserver" | sudo tee -a /etc/hosts
-```text
+```
 
 ## Use Cases After Provisioning
 
@@ -243,7 +243,7 @@ sudo systemctl enable nginx
 
 # Access via browser
 curl http://<asset-ip>
-```text
+```
 
 ### Set Up Database
 
@@ -255,7 +255,7 @@ sudo systemctl enable postgresql
 
 # Access PostgreSQL
 sudo -u postgres psql
-```text
+```
 
 ### Run Docker Containers
 
@@ -268,7 +268,7 @@ docker run -d -p 8080:80 nginx
 
 # Access via browser
 curl http://<asset-ip>:8080
-```text
+```
 
 ## Deprovisioning
 

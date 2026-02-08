@@ -42,27 +42,27 @@ Keep credentials secure. Store in password manager or secrets management system.
 
 **GitLab Token**:
 
-```text
+```
 glpat-xxxxxxxxxxxxxxxxxxxx
-```text
+```
 
 **Image Pull Secret** (base64-encoded Docker config):
 
-```text
+```
 eyJhdXRocyI6eyJnY3IuaW8iOnsidXNlcm5hbWUiOiJfanNvbl9rZXki...
-```text
+```
 
 **Civo API Token**:
 
-```text
+```
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```text
+```
 
 **Region**:
 
-```text
+```
 PHX1
-```text
+```
 
 ## Network Configuration
 
@@ -93,7 +93,7 @@ Talos uses specific ports for cluster communication:
 
 ### Network Topology Example
 
-```text
+```
 Internet
     |
 Gateway (192.168.1.1)
@@ -106,7 +106,7 @@ Management Network (192.168.1.0/24)
     +-- Control Plane 3 (192.168.1.103)
     +-- Worker 1 (192.168.1.201)
     +-- Worker 2 (192.168.1.202)
-```text
+```
 
 ## CSE Installer Image
 
@@ -114,17 +114,17 @@ Management Network (192.168.1.0/24)
 
 Colony uses the latest Civo Stack Engine installer image by default:
 
-```text
+```
 ghcr.io/civo/cse-installer:latest
-```text
+```
 
 ### Custom Image (Optional)
 
 If your Civo account manager provides a specific CSE version:
 
-```text
+```
 ghcr.io/civo/cse-installer:v1.2.3
-```text
+```
 
 :::tip
 Use the default `latest` tag unless instructed otherwise. The installer is version-aware and selects appropriate component versions.

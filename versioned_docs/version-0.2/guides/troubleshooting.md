@@ -38,7 +38,7 @@ ip link set eth0 up
 
 # Check disk space
 df -h /var/lib/rancher/k3s
-```text
+```
 
 ### Pods Won't Start
 
@@ -58,7 +58,7 @@ kubectl logs -n tinkerbell <pod-name>
 
 # Check node resources
 kubectl describe nodes
-```text
+```
 
 Common issues:
 
@@ -87,7 +87,7 @@ kubectl logs -n colony -l app=colony-agent -f
 
 # Check rufio (IPMI controller)
 kubectl logs -n tinkerbell -l app=rufio
-```text
+```
 
 ### Asset Stuck "discovering"
 
@@ -113,7 +113,7 @@ kubectl logs -n tinkerbell -l app=smee
 # Check Tinkerbell workflows
 kubectl get workflows -A
 kubectl describe workflow -n tink-system <workflow-name>
-```text
+```
 
 ## Provisioning Issues
 
@@ -136,7 +136,7 @@ kubectl logs -n tinkerbell -l app=hegel
 
 # Verify disk exists and is writeable
 # Check IPMI console for disk errors
-```text
+```
 
 ### Cluster Provisioning Stuck
 
@@ -158,7 +158,7 @@ talosctl --talosconfig ~/.talos/config version --nodes <node-ip>
 # For K3s clusters: Check SSH access
 ssh -i ~/.ssh/key kbot@<node-ip>
 sudo journalctl -u k3s -f
-```text
+```
 
 ## Network Issues
 
@@ -210,7 +210,7 @@ sudo iptables -L -n | grep 6443
 
 # Check API server running
 kubectl logs -n kube-system -l component=kube-apiserver
-```text
+```
 
 ## Cluster Health Issues
 
@@ -228,7 +228,7 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 
 # Or Cilium
 cilium install
-```text
+```
 
 **For other issues**:
 
@@ -242,7 +242,7 @@ talosctl --talosconfig ~/.talos/config logs --nodes <node-ip> kubelet
 
 # K3s:
 ssh kbot@<node-ip> sudo journalctl -u k3s -f
-```text
+```
 
 ### Pods Won't Schedule
 
@@ -266,7 +266,7 @@ kubectl get pods -n kube-system -l k8s-app=flannel
 
 # - PVC not bound
 kubectl get pvc
-```text
+```
 
 ## Getting Help
 
@@ -286,7 +286,7 @@ kubectl logs -n tinkerbell -l app=smee > smee.log
 
 # Workflows
 kubectl get workflows -A -o yaml > workflows.yaml
-```text
+```
 
 ### Useful Debug Commands
 
@@ -306,7 +306,7 @@ kubectl describe workflow -n tink-system <workflow-name>
 # Colony agent status
 kubectl get pods -n colony
 kubectl describe pod -n colony <agent-pod>
-```text
+```
 
 ## Support Resources
 

@@ -20,7 +20,7 @@ Initialize a K3s management cluster with Tinkerbell.
 
 ```bash
 colony init [flags]
-```text
+```
 
 **Flags**:
 
@@ -35,7 +35,7 @@ colony init \
   --api-key $COLONY_API_KEY \
   --load-balancer-interface eth0 \
   --load-balancer-ip 192.168.1.10
-```text
+```
 
 **What it does**:
 
@@ -51,7 +51,7 @@ Register an asset using IPMI credentials.
 
 ```bash
 colony add-ipmi [flags]
-```text
+```
 
 **Flags**:
 
@@ -68,7 +68,7 @@ colony add-ipmi \
   --username ADMIN \
   --password secretpass \
   --auto-discover
-```text
+```
 
 **What it does**:
 
@@ -83,15 +83,15 @@ Display Colony CLI version.
 
 ```bash
 colony version
-```text
+```
 
 **Example output**:
 
-```text
+```
 Colony CLI version: 0.2.0
 Build date: 2024-01-15
 Commit: abc123def
-```text
+```
 
 ### colony help
 
@@ -99,7 +99,7 @@ Display help information.
 
 ```bash
 colony help [command]
-```text
+```
 
 **Examples**:
 
@@ -110,7 +110,7 @@ colony help
 # Command-specific help
 colony help init
 colony help add-ipmi
-```text
+```
 
 ## Environment Variables
 
@@ -121,7 +121,7 @@ API key for authentication.
 ```bash
 export COLONY_API_KEY="your-api-key-here"
 colony init --load-balancer-interface eth0 --load-balancer-ip 192.168.1.10
-```text
+```
 
 ### IPMI_USERNAME / IPMI_PASSWORD
 
@@ -131,7 +131,7 @@ IPMI credentials for asset discovery.
 export IPMI_USERNAME=ADMIN
 export IPMI_PASSWORD=secretpass
 colony add-ipmi --ip 192.168.2.50 --auto-discover
-```text
+```
 
 ## Exit Codes
 
@@ -150,7 +150,7 @@ K3s kubeconfig created by `colony init`.
 ```bash
 export KUBECONFIG=~/.colony/config
 kubectl get pods -A
-```text
+```
 
 ## Tips
 
@@ -163,7 +163,7 @@ for IP in 192.168.2.{50..60}; do
   colony add-ipmi --ip "$IP" --username ADMIN --password pass --auto-discover
   sleep 5
 done
-```text
+```
 
 ### Secure Password Handling
 
@@ -178,7 +178,7 @@ colony add-ipmi --ip 192.168.2.50 --auto-discover
 # Or use a secrets file
 source ~/.colony-secrets
 colony add-ipmi --ip 192.168.2.50 --auto-discover
-```text
+```
 
 ## What's Next
 

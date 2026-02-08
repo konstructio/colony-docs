@@ -16,19 +16,19 @@ Download and extract the Colony CLI:
 
 ```bash
 curl -fsSL https://objectstore.nyc1.civo.com/konstruct-assets/colony/v0.2.4/colony_Linux_x86_64.tar.gz | tar xz
-```text
+```
 
 Verify the binary works:
 
 ```bash
 colony version
-```text
+```
 
 Move to your PATH:
 
 ```bash
 sudo mv colony /usr/local/bin/
-```text
+```
 
 ## Step 2 - Create Your API Key
 
@@ -46,11 +46,11 @@ colony init \
   --data-center-id <from-ui> \
   --load-balancer-interface <asset-management-interface> \
   --load-balancer-ip <ip-address>
-```text
+```
 
 ```bash
 export KUBECONFIG=~/.colony/config
-```text
+```
 
 ### Items to Note
 
@@ -69,7 +69,7 @@ ipmitool -H <ipmi-ip> -I lanplus -U <username> -P <password> power status
 # Set PXE boot and power on
 ipmitool -H <ipmi-ip> -I lanplus -U <username> -P <password> chassis bootdev pxe
 ipmitool -H <ipmi-ip> -I lanplus -U <username> -P <password> power on
-```text
+```
 
 Assets will PXE boot and automatically appear in the Colony UI.
 

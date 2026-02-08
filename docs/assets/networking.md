@@ -59,7 +59,7 @@ EOF
 
 # Restart dnsmasq
 sudo systemctl restart dnsmasq
-```text
+```
 
 ## Troubleshooting
 
