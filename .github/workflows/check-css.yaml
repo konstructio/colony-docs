@@ -10,7 +10,16 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4.1.7
 
-      - name: stylelint
-        uses: actions-hub/stylelint@v1.1.6
-        env:
-          PATTERN: "**/*.css"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install stylelint
+        run: npm install --no-save stylelint stylelint-config-standard
+
+      - name: Run stylelint
+        run: npx stylelint "src/css/*.css"
