@@ -60,7 +60,7 @@ colony init \
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `gitlabToken` | string | Yes | GitLab personal access token |
-| `imagePullSecret` | string | Yes | Base64-encoded Docker config JSON |
+| `imagePullSecret` | string | Yes | Base64-encoded Docker configuration JSON |
 | `civoApiToken` | string | Yes | Civo API authentication token |
 | `region` | string | Yes | Datacenter region (e.g., `PHX1`) |
 | `cseInstallerImage` | string | No | CSE installer image (default: `latest`) |

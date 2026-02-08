@@ -192,7 +192,7 @@ Required permissions: `read_repository`, `read_registry`.
 
 ### Image Pull Secret
 
-Base64-encoded Docker config JSON for pulling CSE images:
+Base64-encoded Docker configuration JSON for pulling CSE images:
 
 ```
 eyJhdXRocyI6eyJnY3IuaW8iOnsidXNlcm5hbWUiOiJfanNvbl9rZXki...
@@ -406,7 +406,7 @@ Talos has no SSH access. All management is via API using talosctl. This ensures 
 **Solutions**:
 
 - Verify credentials are correct (GitLab token, image pull secret, API token)
-- Check image pull secret format (must be base64-encoded Docker config JSON)
+- Check image pull secret format (must be base64-encoded Docker configuration JSON)
 - Ensure cluster has internet access to pull images from gcr.io or private registry
 - Review installer logs: `kubectl logs -n <namespace> -l job-name=cse-installer`
 - Confirm region identifier matches your datacenter
