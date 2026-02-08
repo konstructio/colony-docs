@@ -2,6 +2,7 @@
 admunition
 Akamai
 anonymize
+apid
 auditable
 authentification
 authtoken
@@ -13,9 +14,13 @@ bootfile
 
 # C
 Ceph
+civostack
+Civostack
 CLI'
 CLIs
 ClusterIssuer
+CNIs
+configs
 containerd
 CPU
 Crossplane
@@ -36,14 +41,18 @@ Docusaurus
 # E
 enablement
 enum
+etcd
 
 # F
 failover
 Failover
 
 # G
+Geneve
+Grafana
 
 # H
+HAProxy
 hardcoded
 hegel
 Hostname
@@ -67,6 +76,8 @@ kubens
 # L
 Lenovo
 Linode
+loopback
+Loopback
 
 # M
 markdownlint
@@ -103,6 +114,8 @@ routable
 rufio
 
 # S
+serverless
+Serverless
 signup
 smee
 statestore
@@ -113,11 +126,14 @@ Supermicro
 # T
 talosconfig
 Talosconfig
+talosctl
+Talosctl
 teardown
 tftp
 todo
 toolset
 Traefik
+trustd
 truststore
 Typesense
 
