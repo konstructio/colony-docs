@@ -20,13 +20,11 @@ Note we have a [code of conduct](CODE_OF_CONDUCT.md) which needs to be followed 
 
 At Konstruct, we believe that every contribution is valuable, not just the code one.
 
-Whether you want to add more details to a specific section or a page, or that you want to fix a typo in the text or in a code example, you are more than welcome to can create a pull request.
+Whether you want to add more details to a specific section or a page, or that you want to fix a typo in the text or in a code example, you are more than welcome to contribute.
 
-For more substantial changes, it is highly suggested that you discuss your idea with us first. You can do that by either creating an [issue](https://github.com/konstructio/colony-docs/issues/new), or by joining us in our [Slack community](https://konstruct.io/slack), and start a thread in the #contributors channel.
+For more substantial changes, it is highly suggested that you discuss your idea with us first. You can do that by joining us in our [Slack community](https://konstruct.io/slack), and start a thread in the #contributors channel.
 
-If you don't want to make the changes yourself, no worries, we got your back: just report the problem by creating an [issue](https://github.com/konstructio/colony-docs/issues/new) or letting us know on our [Slack Community](https://konstruct.io/slack).
-
-Please check if a problem or a suggestion has already been created as an [issue](https://github.com/konstructio/colony-docs/issues/) before creating a new one.
+If you don't want to make the changes yourself, no worries, we got your back: just report the problem by letting us know on our [Slack Community](https://konstruct.io/slack).
 
 ## Getting Started
 
@@ -49,7 +47,7 @@ Here's the non content related ones:
 
 As of now, we don't see usage for the `perf` & `test` prefixes.
 
-We suggest that you create a branch within your fork to add your changes, before creating a pull request, instead of committing them directly to your `main` branch. It will prevent misunderstanding in the GitHub UI for status like `Merge branch 'main' into main` which in that case we updated your pull request code with the latest from the `colony-docs` repository `main` branch. It could be interpreted as we already merged your changes to the `colony-docs` repository `main` branch while it's not the case. A best practice and simple step that can improve communication.
+We suggest that you create a branch within your fork to add your changes, before creating a pull request, instead of committing them directly to your `main` branch. It will prevent misunderstanding in the GitHub UI for status like `Merge branch 'main' into main` which in that case we updated your pull request code with the latest from the repository `main` branch. It could be interpreted as we already merged your changes to the repository `main` branch while it's not the case. A best practice and simple step that can improve communication.
 
 Lastly, your commits need to be signed so they can be verified. GitHub has [great documentation on how to do that](https://docs.github.com/en/authentication/managing-commit-signature-verification). If you do not sign your commit, you'll get additional information by the GitHub Action in your pull request.
 

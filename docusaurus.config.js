@@ -36,6 +36,13 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
+          lastVersion: '0.2',
+          versions: {
+            current: {
+              label: '0.3 (Next)',
+              banner: 'none',
+            },
+          },
         },
         blog: false,
         theme: {

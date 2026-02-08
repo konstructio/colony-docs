@@ -2,18 +2,25 @@
 admunition
 Akamai
 anonymize
+apid
 auditable
 authentification
 authtoken
 automation
 
 # B
+bootable
+bootfile
 
 # C
 Ceph
+civostack
+Civostack
 CLI'
 CLIs
 ClusterIssuer
+CNIs
+configs
 containerd
 CPU
 Crossplane
@@ -21,21 +28,39 @@ CWFT
 
 # D
 Datadog
+datacenter
+Datacenter
+datacenters
+Datacenters
 deprovision
+dev
+dnsmasq
 Dockerfile
 Docusaurus
 
 # E
+enablement
+enum
+etcd
 
 # F
+failover
+Failover
 
 # G
+Geneve
+Grafana
 
 # H
+HAProxy
 hardcoded
+hegel
+Hostname
 hotfix
 
 # I
+ipmitool
+IPs
 interoperate
 
 # J
@@ -45,10 +70,14 @@ kbot
 KMS
 konstruct
 kubectl
+kubelet
 kubens
 
 # L
+Lenovo
 Linode
+loopback
+Loopback
 
 # M
 markdownlint
@@ -59,14 +88,18 @@ multinode
 # N
 namespace
 nerdctl
+newdatacenter
+NICs
 npm
 ngrok
 Nginx
 
 # O
+OAuth
 onboarding
 
 # P
+pingable
 preconfigure
 preloaded
 
@@ -74,17 +107,33 @@ preloaded
 
 # R
 Reloader
+Repurpose
+repos
+reprovisioning
 routable
+rufio
 
 # S
+serverless
+Serverless
+signup
+smee
 statestore
+sudo
 subnet
+Supermicro
 
 # T
+talosconfig
+Talosconfig
+talosctl
+Talosctl
 teardown
+tftp
 todo
 toolset
 Traefik
+trustd
 truststore
 Typesense
 
@@ -94,11 +143,14 @@ uncomment
 # V
 vale
 vcluster
+Virtio
+VLANs
 VM
 Vultr
 
 # W
 walkthrough
+wget
 
 # X
 
