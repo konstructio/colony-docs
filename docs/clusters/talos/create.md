@@ -34,9 +34,9 @@ Configure basic cluster settings:
 
 Enter a descriptive name for your cluster:
 
-```
+```text
 prod-talos-cluster
-```
+```text
 
 Use lowercase, alphanumeric characters, and hyphens. This name appears in the UI and kubeconfig.
 
@@ -56,9 +56,9 @@ This configures Colony to use Talos Linux provisioning (without CSE).
 
 Enter your network gateway IP address:
 
-```
+```text
 192.168.1.1
-```
+```text
 
 This is the default route for all cluster nodes.
 
@@ -66,9 +66,9 @@ This is the default route for all cluster nodes.
 
 Add additional Subject Alternative Names for the API server certificate:
 
-```
+```text
 cluster.example.com,api.cluster.local,192.168.1.100
-```
+```text
 
 Comma-separated list. Useful if you'll access the API via DNS or load balancer. Leave empty if using only control plane IPs.
 
@@ -102,9 +102,9 @@ For each control plane node, enter:
 
 **Disk Device**: Device path for etcd and Kubernetes data:
 
-```
+```text
 /dev/sda
-```
+```text
 
 Common values:
 
@@ -204,7 +204,7 @@ kubectl get workflows -A
 
 # View workflow details
 kubectl describe workflow -n tink-system <workflow-name>
-```
+```text
 
 ## Verification
 
@@ -218,7 +218,7 @@ Once provisioning completes:
 
 ```bash
 export KUBECONFIG=~/.kube/talos-config
-```
+```text
 
 ### Check Cluster Status
 
@@ -226,17 +226,17 @@ Verify cluster is accessible:
 
 ```bash
 kubectl get nodes
-```
+```text
 
 Expected output (nodes will be NotReady without CNI):
 
-```
+```text
 NAME                    STATUS     ROLES           AGE   VERSION
 control-plane-01        NotReady   control-plane   5m    v1.29.0
 control-plane-02        NotReady   control-plane   4m    v1.29.0
 worker-01               NotReady   <none>          3m    v1.29.0
 worker-02               NotReady   <none>          3m    v1.29.0
-```
+```text
 
 :::tip
 Nodes show "NotReady" because no CNI is installed yet. This is expected for Talos Linux. Continue to CNI installation.
@@ -252,7 +252,7 @@ For Talos node management:
 
 ```bash
 talosctl --talosconfig ~/.talos/config version --nodes 192.168.1.101
-```
+```text
 
 ## Install CNI (Required)
 
@@ -264,13 +264,13 @@ Simple VXLAN overlay network:
 
 ```bash
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
-```
+```text
 
 Wait for Flannel pods to run:
 
 ```bash
 kubectl get pods -n kube-flannel
-```
+```text
 
 ### Option 2: Cilium (Recommended)
 
@@ -285,13 +285,13 @@ rm cilium-linux-amd64.tar.gz
 
 # Install Cilium
 cilium install
-```
+```text
 
 Wait for Cilium to be ready:
 
 ```bash
 cilium status --wait
-```
+```text
 
 ### Option 3: Calico
 
@@ -299,13 +299,13 @@ BGP-based networking with network policy:
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/manifests/calico.yaml
-```
+```text
 
 Wait for Calico pods to run:
 
 ```bash
 kubectl get pods -n kube-system -l k8s-app=calico-node
-```
+```text
 
 ### Verify CNI Installation
 
@@ -313,17 +313,17 @@ After installing CNI, nodes should become Ready:
 
 ```bash
 kubectl get nodes
-```
+```text
 
 Expected output:
 
-```
+```text
 NAME                    STATUS   ROLES           AGE   VERSION
 control-plane-01        Ready    control-plane   8m    v1.29.0
 control-plane-02        Ready    control-plane   7m    v1.29.0
 worker-01               Ready    <none>          6m    v1.29.0
 worker-02               Ready    <none>          6m    v1.29.0
-```
+```text
 
 All nodes should show "Ready" status.
 
@@ -340,7 +340,7 @@ kubectl wait --for=condition=ready pod/test-nginx --timeout=60s
 
 # Check pod has IP
 kubectl get pod test-nginx -o wide
-```
+```text
 
 Test connectivity:
 
@@ -352,7 +352,7 @@ kubectl run test-curl --rm -it --image=curlimages/curl -- /bin/sh
 curl http://test-nginx.default.svc.cluster.local
 # Should return nginx welcome page
 exit
-```
+```text
 
 If curl succeeds, CNI is working correctly!
 
@@ -371,7 +371,7 @@ talosctl --talosconfig ~/.talos/config services --nodes 192.168.1.101
 
 # etcd members (control planes)
 talosctl --talosconfig ~/.talos/config -n 192.168.1.101 etcd members
-```
+```text
 
 ### View Logs
 
@@ -384,7 +384,7 @@ talosctl --talosconfig ~/.talos/config logs --nodes 192.168.1.101 kube-apiserver
 
 # All services
 talosctl --talosconfig ~/.talos/config dmesg --nodes 192.168.1.101
-```
+```text
 
 ### Node Operations
 
@@ -397,7 +397,7 @@ talosctl --talosconfig ~/.talos/config shutdown --nodes 192.168.1.201
 
 # Reset a node (wipe and rejoin)
 talosctl --talosconfig ~/.talos/config reset --nodes 192.168.1.201
-```
+```text
 
 :::warning
 Talos has NO SSH access. All management is via `talosctl` API. This ensures immutability and security.
@@ -478,7 +478,7 @@ Your Talos Linux cluster is ready! Here's what you can do:
 helm repo add traefik https://helm.traefik.io/traefik
 helm repo update
 helm install traefik traefik/traefik --namespace traefik --create-namespace
-```
+```text
 
 **Storage Provisioner** (Longhorn):
 
@@ -486,7 +486,7 @@ helm install traefik traefik/traefik --namespace traefik --create-namespace
 helm repo add longhorn https://charts.longhorn.io
 helm repo update
 helm install longhorn longhorn/longhorn --namespace longhorn-system --create-namespace
-```
+```text
 
 **Monitoring** (Prometheus + Grafana):
 
@@ -495,7 +495,7 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm repo update
 helm install prometheus prometheus-community/kube-prometheus-stack \
   --namespace monitoring --create-namespace
-```
+```text
 
 ### Add More Nodes
 
@@ -512,7 +512,7 @@ Use kubectl or Helm:
 kubectl create deployment hello --image=gcr.io/google-samples/hello-app:1.0
 kubectl expose deployment hello --port=8080 --type=NodePort
 kubectl get svc hello
-```
+```text
 
 ### Configure Storage
 
@@ -528,7 +528,7 @@ parameters:
   numberOfReplicas: "3"
   staleReplicaTimeout: "2880"
 allowVolumeExpansion: true
-```
+```text
 
 ### Set Up Backups
 
@@ -537,7 +537,7 @@ Back up etcd for disaster recovery:
 ```bash
 # Using talosctl
 talosctl --talosconfig ~/.talos/config -n 192.168.1.101 etcd snapshot /tmp/etcd-backup.db
-```
+```text
 
 ### Upgrade Cluster
 
@@ -553,7 +553,7 @@ talosctl --talosconfig ~/.talos/config upgrade \
 talosctl --talosconfig ~/.talos/config upgrade-k8s \
   --nodes 192.168.1.101 \
   --to 1.30.0
-```
+```text
 
 ## Learn More
 

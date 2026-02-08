@@ -112,7 +112,7 @@ rm kubectl
 # Add user to docker group (optional, avoids sudo for docker commands)
 sudo usermod -aG docker $USER
 newgrp docker
-```
+```text
 
 ## Root Privileges
 
@@ -139,7 +139,7 @@ ip addr show
 # 1: lo: ...
 # 2: eth0: inet 192.168.1.10/24 ...
 # 3: eth1: inet 10.0.0.5/24 ...
-```
+```text
 
 You'll need:
 
@@ -159,17 +159,17 @@ Colony requires an existing DHCP server configured for PXE boot. The DHCP server
 
 Your DHCP server needs these options:
 
-```
+```text
 # Example dnsmasq configuration
 dhcp-range=192.168.1.100,192.168.1.200,12h
 dhcp-boot=pxelinux.0,<load-balancer-hostname>,<load-balancer-ip>
 enable-tftp
 tftp-root=/var/lib/tftpboot
-```
+```text
 
 Or for ISC DHCP:
 
-```
+```text
 subnet 192.168.1.0 netmask 255.255.255.0 {
   range 192.168.1.100 192.168.1.200;
   option routers 192.168.1.1;
@@ -177,7 +177,7 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
   next-server <load-balancer-ip>;
   filename "pxelinux.0";
 }
-```
+```text
 
 Replace `<load-balancer-ip>` with the IP you'll use for `colony init --load-balancer-ip`.
 

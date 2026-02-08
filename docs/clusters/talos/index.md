@@ -4,8 +4,6 @@ description: Standard Kubernetes with Talos Linux for generic deployments
 sidebar_position: 3
 ---
 
-# Talos Linux Clusters
-
 ## What is Talos Linux?
 
 Talos Linux provides standard Kubernetes without vendor-specific components. It's a clean, immutable OS managed entirely via API - no SSH, no shell, no package manager. Perfect for secure, reproducible Kubernetes deployments with full control over networking, storage, and add-ons.
@@ -96,14 +94,14 @@ Once your cluster is provisioned:
 # From Colony UI, download kubeconfig and talosconfig
 export KUBECONFIG=~/talos-cluster-config
 export TALOSCONFIG=~/.talos/config
-```
+```text
 
 **2. Verify cluster** (nodes will be NotReady without CNI):
 
 ```bash
 kubectl get nodes
 # All nodes show NotReady - this is expected
-```
+```text
 
 **3. Install CNI** (required):
 
@@ -113,14 +111,14 @@ kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/
 
 # Wait for nodes to become Ready
 kubectl get nodes --watch
-```
+```text
 
 **4. Deploy workloads**:
 
 ```bash
 kubectl create deployment nginx --image=nginx
 kubectl get pods
-```
+```text
 
 See the [Create Guide](./create.md#whats-next) for detailed CNI installation options.
 

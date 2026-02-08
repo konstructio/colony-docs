@@ -31,7 +31,7 @@ colony version
 
 # Move to PATH
 sudo mv colony /usr/local/bin/
-```
+```text
 
 ### Step 2: Create API Key
 
@@ -62,7 +62,7 @@ colony init \
   --load-balancer-ip 192.168.1.10
 
 export KUBECONFIG=~/.colony/config
-```
+```text
 
 ## Prerequisites
 

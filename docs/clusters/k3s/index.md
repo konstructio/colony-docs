@@ -4,8 +4,6 @@ description: Lightweight Kubernetes on Ubuntu for development and edge deploymen
 sidebar_position: 2
 ---
 
-# K3s Clusters
-
 ## What is K3s?
 
 K3s is a lightweight, certified Kubernetes distribution designed for resource-constrained environments, edge computing, and development. Colony provisions K3s clusters on Ubuntu 22.04 with SSH access, Traefik ingress, and local storage included.
@@ -82,14 +80,14 @@ Once your cluster is provisioned, you can:
 # Download kubeconfig from Colony UI
 export KUBECONFIG=~/k3s-cluster-config
 kubectl get nodes
-```
+```text
 
 **Deploy workloads**:
 
 ```bash
 kubectl create deployment nginx --image=nginx
 kubectl expose deployment nginx --port=80 --type=LoadBalancer
-```
+```text
 
 **Use Traefik ingress**:
 
@@ -110,7 +108,7 @@ spec:
             name: my-service
             port:
               number: 80
-```
+```text
 
 ## Learn More
 

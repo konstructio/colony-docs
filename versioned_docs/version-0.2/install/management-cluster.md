@@ -32,7 +32,7 @@ colony init \
   --data-center-id <from-ui> \
   --load-balancer-interface eth0 \
   --load-balancer-ip 192.168.1.10
-```
+```text
 
 ### Parameters
 
@@ -49,7 +49,7 @@ colony init \
   --data-center-id aa872c72-cbe1-498b-9b83-37a19e578d34 \
   --load-balancer-interface vlan1001 \
   --load-balancer-ip 10.1.1.5
-```
+```text
 
 :::tip
 The load balancer IP serves as the PXE boot "next-server" (TFTP server). Ensure your DHCP server is configured to direct PXE clients to this address.
@@ -61,13 +61,13 @@ After initialization completes, export the kubeconfig:
 
 ```bash
 export KUBECONFIG=~/.colony/config
-```
+```text
 
 Add this to your shell profile (`.bashrc`, `.zshrc`) to persist across sessions:
 
 ```bash
 echo 'export KUBECONFIG=~/.colony/config' >> ~/.bashrc
-```
+```text
 
 ## Verify the Installation
 
@@ -75,7 +75,7 @@ Check that all Tinkerbell components are running:
 
 ```bash
 kubectl get pods -A
-```
+```text
 
 You should see pods in these namespaces:
 
@@ -109,7 +109,7 @@ kubectl logs -n tinkerbell <pod-name>
 
 # Describe pod for events
 kubectl describe pod -n tinkerbell <pod-name>
-```
+```text
 
 Common issues:
 

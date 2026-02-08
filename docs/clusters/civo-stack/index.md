@@ -4,8 +4,6 @@ description: Private cloud on your bare metal infrastructure
 sidebar_position: 1
 ---
 
-# Civo Stack Enterprise
-
 ## Overview
 
 Civo Stack Enterprise transforms your bare metal infrastructure into a complete private cloud platform. Deploy VMs, Kubernetes, databases, object storage, and serverless workloads - all on your own hardware.
@@ -18,7 +16,7 @@ Civo Stack Enterprise transforms your bare metal infrastructure into a complete 
 
 A complete private cloud platform with:
 
-**Compute & Workloads**
+### Compute & Workloads
 
 - Live VM migration with zero downtime
 - Native Kubernetes clusters
@@ -26,20 +24,20 @@ A complete private cloud platform with:
 - GPU and AI/ML workload support
 - Serverless and containerized applications
 
-**Storage & Data**
+### Storage & Data
 
 - Object storage for backups and artifacts
 - Block storage for persistent volumes
 - DBaaS (managed MySQL, PostgreSQL)
 
-**Management**
+### Management
 
 - Centralized web dashboard
 - Infrastructure as Code (API, CLI, Terraform)
 - Automated updates and security patches
 - Hybrid cloud integration (AWS, Azure, GCP)
 
-**Enterprise Features**
+### Enterprise Features
 
 - 24/7 enterprise support
 - SOC 2, ISO 27001 certified

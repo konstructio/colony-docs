@@ -57,13 +57,13 @@ Assets automatically discover when they PXE boot on the management network. Use 
 
 ```bash
 ipmitool -H 10.90.13.16 -I lanplus -U admin -P $PASS power status
-```
+```text
 
 ### Power On Asset
 
 ```bash
 ipmitool -H 10.90.13.16 -I lanplus -U admin -P $PASS power on
-```
+```text
 
 ### Set PXE Boot
 
@@ -73,7 +73,7 @@ ipmitool -H 10.90.13.16 -I lanplus -U admin -P $PASS chassis bootdev pxe
 
 # Power cycle to boot from network
 ipmitool -H 10.90.13.16 -I lanplus -U admin -P $PASS power reset
-```
+```text
 
 ### Bulk Power Operations
 
@@ -91,7 +91,7 @@ while IFS=, read -r IP USER PASS; do
   ipmitool -H "$IP" -I lanplus -U "$USER" -P "$PASS" power on
   sleep 2
 done < ipmi-assets.csv
-```
+```text
 
 Assets will PXE boot and automatically register with Colony.
 
@@ -119,7 +119,7 @@ kubectl get hardware -A -w
 
 # Describe specific hardware
 kubectl describe hardware -n <namespace> <hardware-name>
-```
+```text
 
 ## Asset Lifecycle
 
@@ -135,11 +135,11 @@ Assets progress through these statuses:
 
 ### Status Flow
 
-```
+```text
 discovering → available → provisioning → provisioned
                 ↑            ↓
                 └── deprovisioning ←┘
-```
+```text
 
 ### Typical Timeline
 
@@ -236,7 +236,7 @@ hostname,ipmi_ip,ipmi_user,ipmi_pass,datacenter,rack,slot
 server01,192.168.2.50,ADMIN,pass1,DC1,R01,U01
 server02,192.168.2.51,ADMIN,pass2,DC1,R01,U02
 server03,192.168.2.52,ADMIN,pass3,DC1,R02,U01
-```
+```text
 
 ### Stagger Discovery
 

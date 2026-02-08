@@ -91,7 +91,7 @@ kubectl get nodes
 
 # Watch nodes become Ready
 kubectl get nodes -w
-```
+```text
 
 New nodes should appear and transition to "Ready" status.
 
@@ -103,7 +103,7 @@ kubectl get pods -A -o wide
 
 # Verify scheduler uses new nodes
 kubectl get events --sort-by='.lastTimestamp'
-```
+```text
 
 ## Troubleshooting
 
@@ -150,14 +150,14 @@ To remove nodes from a cluster:
 ```bash
 # Gracefully evict pods
 kubectl drain <node-name> --ignore-daemonsets --delete-emptydir-data
-```
+```text
 
 ### Delete Node
 
 ```bash
 # Remove from cluster
 kubectl delete node <node-name>
-```
+```text
 
 ### Deprovision Asset
 

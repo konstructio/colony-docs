@@ -17,7 +17,7 @@ colony init \
   --api-key STRING \
   --load-balancer-interface STRING \
   --load-balancer-ip STRING
-```
+```text
 
 | Parameter | Description | Example |
 |-----------|-------------|---------|
@@ -131,7 +131,7 @@ talosctl --talosconfig ~/.talos/config get machineconfig -n <node-ip>
 talosctl --talosconfig ~/.talos/config apply-config \
   --nodes <node-ip> \
   --file custom-config.yaml
-```
+```text
 
 ## K3s Configuration
 
@@ -144,7 +144,7 @@ tls-san:
   - "cluster.example.com"
 disable:
   - traefik  # Disable if using custom ingress
-```
+```text
 
 ## Resource Requirements
 
