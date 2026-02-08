@@ -8,6 +8,8 @@ authtoken
 automation
 
 # B
+bootable
+bootfile
 
 # C
 Ceph
@@ -21,21 +23,35 @@ CWFT
 
 # D
 Datadog
+datacenter
+Datacenter
+datacenters
+Datacenters
 deprovision
+dev
+dnsmasq
 Dockerfile
 Docusaurus
 
 # E
+enablement
+enum
 
 # F
+failover
+Failover
 
 # G
 
 # H
 hardcoded
+hegel
+Hostname
 hotfix
 
 # I
+ipmitool
+IPs
 interoperate
 
 # J
@@ -45,9 +61,11 @@ kbot
 KMS
 konstruct
 kubectl
+kubelet
 kubens
 
 # L
+Lenovo
 Linode
 
 # M
@@ -59,14 +77,18 @@ multinode
 # N
 namespace
 nerdctl
+newdatacenter
+NICs
 npm
 ngrok
 Nginx
 
 # O
+OAuth
 onboarding
 
 # P
+pingable
 preconfigure
 preloaded
 
@@ -74,14 +96,25 @@ preloaded
 
 # R
 Reloader
+Repurpose
+repos
+reprovisioning
 routable
+rufio
 
 # S
+signup
+smee
 statestore
+sudo
 subnet
+Supermicro
 
 # T
+talosconfig
+Talosconfig
 teardown
+tftp
 todo
 toolset
 Traefik
@@ -94,11 +127,14 @@ uncomment
 # V
 vale
 vcluster
+Virtio
+VLANs
 VM
 Vultr
 
 # W
 walkthrough
+wget
 
 # X
 
