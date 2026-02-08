@@ -10,9 +10,9 @@ Colony provides a REST API for programmatic access to infrastructure management.
 
 ## Base URL
 
-```text
+```
 https://colony.konstruct.io/api/v1
-```text
+```
 
 ## Authentication
 
@@ -21,7 +21,7 @@ All API requests require authentication via API key:
 ```bash
 curl -H "Authorization: Bearer YOUR_API_KEY" \
   https://colony.konstruct.io/api/v1/assets
-```text
+```
 
 See [Create API Key](../getting-started/api-key.md) for obtaining credentials.
 
@@ -31,73 +31,73 @@ See [Create API Key](../getting-started/api-key.md) for obtaining credentials.
 
 **List Assets**:
 
-```text
+```
 GET /api/v1/assets
-```text
+```
 
 **Get Asset Details**:
 
-```text
+```
 GET /api/v1/assets/{id}
-```text
+```
 
 **Provision Asset**:
 
-```text
+```
 POST /api/v1/assets/{id}/provision
-```text
+```
 
 **Wipe Asset**:
 
-```text
+```
 POST /api/v1/assets/{id}/wipe
-```text
+```
 
 ### Clusters
 
 **List Clusters**:
 
-```text
+```
 GET /api/v1/clusters
-```text
+```
 
 **Create Cluster**:
 
-```text
+```
 POST /api/v1/clusters
-```text
+```
 
 **Get Cluster Details**:
 
-```text
+```
 GET /api/v1/clusters/{id}
-```text
+```
 
 **Delete Cluster**:
 
-```text
+```
 DELETE /api/v1/clusters/{id}
-```text
+```
 
 **Download Kubeconfig**:
 
-```text
+```
 GET /api/v1/clusters/{id}/kubeconfig
-```text
+```
 
 ### Workflows
 
 **List Workflows**:
 
-```text
+```
 GET /api/v1/workflows
-```text
+```
 
 **Get Workflow Status**:
 
-```text
+```
 GET /api/v1/workflows/{id}
-```text
+```
 
 ## Example Requests
 
@@ -108,7 +108,7 @@ curl -X POST https://colony.konstruct.io/api/v1/clusters \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d @cluster-config.json
-```text
+```
 
 **cluster-config.json**:
 
@@ -139,14 +139,14 @@ curl -X POST https://colony.konstruct.io/api/v1/clusters \
     "region": "PHX1"
   }
 }
-```text
+```
 
 ### List Assets
 
 ```bash
 curl -H "Authorization: Bearer YOUR_API_KEY" \
   https://colony.konstruct.io/api/v1/assets
-```text
+```
 
 **Response**:
 
@@ -166,7 +166,7 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
     }
   ]
 }
-```text
+```
 
 ## Rate Limits
 
@@ -195,7 +195,7 @@ Error response format:
   "code": "ASSET_NOT_FOUND",
   "details": "Asset with ID 'asset-123' does not exist"
 }
-```text
+```
 
 ## What's Next
 

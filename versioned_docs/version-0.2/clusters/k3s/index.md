@@ -82,14 +82,14 @@ Once your cluster is provisioned, you can:
 # Download kubeconfig from Colony UI
 export KUBECONFIG=~/k3s-cluster-config
 kubectl get nodes
-```text
+```
 
 **Deploy workloads**:
 
 ```bash
 kubectl create deployment nginx --image=nginx
 kubectl expose deployment nginx --port=80 --type=LoadBalancer
-```text
+```
 
 **Use Traefik ingress**:
 
@@ -110,7 +110,7 @@ spec:
             name: my-service
             port:
               number: 80
-```text
+```
 
 ## Learn More
 

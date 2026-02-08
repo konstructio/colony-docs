@@ -14,7 +14,7 @@ This guide covers upgrading Colony CLI, management clusters, and provisioned clu
 
 ```bash
 colony version
-```text
+```
 
 ### Download Latest Release
 
@@ -34,14 +34,14 @@ sudo chmod +x /usr/local/bin/colony
 
 # Verify
 colony version
-```text
+```
 
 ### Rollback if Needed
 
 ```bash
 # Restore old version
 sudo mv /usr/local/bin/colony.bak /usr/local/bin/colony
-```text
+```
 
 ## Upgrade Management Cluster
 
@@ -59,7 +59,7 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.28.5+k3s1 sh -
 # Verify
 kubectl version --short
 kubectl get nodes
-```text
+```
 
 ### Tinkerbell Components
 
@@ -89,7 +89,7 @@ talosctl --talosconfig ~/.talos/config upgrade \
 talosctl --talosconfig ~/.talos/config upgrade-k8s \
   --nodes <control-plane-ip> \
   --to 1.30.0
-```text
+```
 
 **Process**:
 
@@ -111,7 +111,7 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION=v1.28.5+k3s1 sh -
 
 # For workers, also upgrade
 sudo systemctl restart k3s-agent
-```text
+```
 
 **Process**:
 
@@ -130,7 +130,7 @@ sudo tar -czf k3s-backup.tar.gz /var/lib/rancher/k3s
 
 # Backup kubeconfig
 cp ~/.colony/config ~/.colony/config.bak
-```text
+```
 
 ### Provisioned Clusters
 
@@ -144,7 +144,7 @@ talosctl --talosconfig ~/.talos/config -n <control-plane-ip> \
 # Download backup
 talosctl --talosconfig ~/.talos/config -n <control-plane-ip> \
   copy /tmp/etcd-backup.db ./etcd-backup.db
-```text
+```
 
 **K3s**:
 
@@ -155,7 +155,7 @@ ssh kbot@<control-plane-ip> \
 
 # Download backup
 scp kbot@<control-plane-ip>:/tmp/k3s-backup.tar.gz ./
-```text
+```
 
 ## Rollback Procedures
 
@@ -186,7 +186,7 @@ If upgrade fails:
 talosctl --talosconfig ~/.talos/config upgrade \
   --nodes <node-ip> \
   --image ghcr.io/siderolabs/installer:v1.6.0
-```text
+```
 
 **K3s**: Restore from backup via SSH on each node.
 

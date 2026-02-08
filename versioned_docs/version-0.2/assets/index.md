@@ -12,7 +12,7 @@ Assets are physical machines managed by Colony. They progress through a lifecycl
 
 Assets move through these statuses:
 
-```text
+```
          Initial Discovery
                 ↓
          [discovering]
@@ -24,7 +24,7 @@ Assets move through these statuses:
          [provisioned]       │
                 ↓            │
         [deprovisioning] ────┘
-```text
+```
 
 ### Status Descriptions
 
@@ -179,7 +179,7 @@ kubectl get hardware -A -w
 
 # Get detailed info
 kubectl describe hardware -n <namespace> <hardware-name>
-```text
+```
 
 ## Troubleshooting
 

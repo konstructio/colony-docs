@@ -14,13 +14,13 @@ Colony automatically discovers assets when they PXE boot on the management netwo
 
 ```bash
 ipmitool -H 10.90.13.16 -I lanplus -U admin -P $PASS power status
-```text
+```
 
 ### Power On Asset
 
 ```bash
 ipmitool -H 10.90.13.16 -I lanplus -U admin -P $PASS power on
-```text
+```
 
 ### Set PXE Boot
 
@@ -30,7 +30,7 @@ ipmitool -H 10.90.13.16 -I lanplus -U admin -P $PASS chassis bootdev pxe
 
 # Power cycle to boot from network
 ipmitool -H 10.90.13.16 -I lanplus -U admin -P $PASS power reset
-```text
+```
 
 ## Bulk Discovery
 
@@ -48,7 +48,7 @@ while IFS=, read -r IP USER PASS; do
   ipmitool -H "$IP" -I lanplus -U "$USER" -P "$PASS" power on
   sleep 2
 done < ipmi-assets.csv
-```text
+```
 
 ## Auto-Discovery Process
 

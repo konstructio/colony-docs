@@ -38,9 +38,9 @@ Configure basic cluster settings:
 
 Enter a descriptive name for your cluster:
 
-```text
+```
 production-cluster-01
-```text
+```
 
 Use lowercase, alphanumeric characters, and hyphens. This name appears in the UI and kubeconfig.
 
@@ -54,9 +54,9 @@ This sets the cluster type to `civo_stack` with flavor `talos`.
 
 Enter your network gateway IP address:
 
-```text
+```
 192.168.1.1
-```text
+```
 
 This is the default route for all cluster nodes.
 
@@ -64,10 +64,10 @@ This is the default route for all cluster nodes.
 
 Add additional Subject Alternative Names for the API server certificate:
 
-```text
+```
 cluster.example.com
 192.168.1.100
-```text
+```
 
 Comma-separated list. Leave empty if using only the default API server IP.
 
@@ -101,9 +101,9 @@ For each control plane node, enter:
 
 **Disk Device**: Device path for etcd and Kubernetes data:
 
-```text
+```
 /dev/sda
-```text
+```
 
 Common values:
 
@@ -174,9 +174,9 @@ Enter your Civo Stack credentials obtained from your account manager:
 
 Your datacenter region identifier:
 
-```text
+```
 PHX1
-```text
+```
 
 Examples: `PHX1`, `NYC3`, `LON1`. Contact your account manager if unsure.
 
@@ -184,9 +184,9 @@ Examples: `PHX1`, `NYC3`, `LON1`. Contact your account manager if unsure.
 
 Personal access token for Civo Stack GitLab repositories:
 
-```text
+```
 glpat-xxxxxxxxxxxxxxxxxxxx
-```text
+```
 
 Required permissions: `read_repository`, `read_registry`.
 
@@ -194,9 +194,9 @@ Required permissions: `read_repository`, `read_registry`.
 
 Base64-encoded Docker config JSON for pulling CSE images:
 
-```text
+```
 eyJhdXRocyI6eyJnY3IuaW8iOnsidXNlcm5hbWUiOiJfanNvbl9rZXki...
-```text
+```
 
 This is the full base64-encoded string, not the raw JSON.
 
@@ -204,17 +204,17 @@ This is the full base64-encoded string, not the raw JSON.
 
 Authentication token for Civo services:
 
-```text
+```
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```text
+```
 
 ### CSE Installer Image (Optional)
 
 Leave default unless instructed by your account manager:
 
-```text
+```
 ghcr.io/civo/cse-installer:latest
-```text
+```
 
 The installer auto-selects compatible component versions.
 
@@ -275,7 +275,7 @@ kubectl get workflows -A
 
 # View workflow details
 kubectl describe workflow -n tink-system <workflow-name>
-```text
+```
 
 ## Verification
 
@@ -291,7 +291,7 @@ Once provisioning completes:
 
 ```bash
 export KUBECONFIG=~/.kube/civo-stack-config
-```text
+```
 
 ### Verify Cluster Health
 
@@ -299,17 +299,17 @@ Check all nodes are Ready:
 
 ```bash
 kubectl get nodes
-```text
+```
 
 Expected output:
 
-```text
+```
 NAME                    STATUS   ROLES           AGE   VERSION
 control-plane-01        Ready    control-plane   10m   v1.29.0
 control-plane-02        Ready    control-plane   9m    v1.29.0
 worker-01               Ready    <none>          8m    v1.29.0
 worker-02               Ready    <none>          8m    v1.29.0
-```text
+```
 
 ### Check System Pods
 
@@ -317,7 +317,7 @@ Verify core components are running:
 
 ```bash
 kubectl get pods -A
-```text
+```
 
 Look for:
 
@@ -338,7 +338,7 @@ kubectl get secrets -A | grep gcr-mirror-pull
 
 # Verify CSE installer job completed
 kubectl get jobs -A | grep cse-installer
-```text
+```
 
 All should show successful status.
 
@@ -350,7 +350,7 @@ Deploy a test workload:
 kubectl run nginx --image=nginx --port=80
 kubectl expose pod nginx --port=80 --type=NodePort
 kubectl get svc nginx
-```text
+```
 
 Access the service using any node IP and the NodePort to confirm networking works.
 
@@ -379,7 +379,7 @@ talosctl logs --nodes 192.168.1.101 kubelet
 
 # Reboot a node
 talosctl reboot --nodes 192.168.1.201
-```text
+```
 
 :::tip
 Talos has no SSH access. All management is via API using talosctl. This ensures immutability and security.
@@ -464,7 +464,7 @@ Use kubectl or Helm to deploy workloads:
 # Example: Deploy a simple app
 kubectl create deployment hello --image=gcr.io/google-samples/hello-app:1.0
 kubectl expose deployment hello --port=8080 --type=LoadBalancer
-```text
+```
 
 ### Configure Storage
 
@@ -487,7 +487,7 @@ spec:
     requests:
       storage: 10Gi
 EOF
-```text
+```
 
 ### Enable Monitoring
 
@@ -505,7 +505,7 @@ Review autopilot configuration:
 
 ```bash
 kubectl get configmap -n kube-system autopilot-config -o yaml
-```text
+```
 
 Autopilot manages:
 

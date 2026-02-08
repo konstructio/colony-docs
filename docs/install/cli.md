@@ -35,7 +35,7 @@ Download the Colony CLI binary:
 
 ```bash
 curl -fsSL https://objectstore.nyc1.civo.com/konstruct-assets/colony/v0.2.4/colony_Linux_x86_64.tar.gz | tar xz
-```text
+```
 
 This downloads and extracts the `colony` binary to your current directory.
 
@@ -45,19 +45,19 @@ Test that the binary works:
 
 ```bash
 colony version
-```text
+```
 
 **Expected output:**
 
-```text
+```
 colony version v0.2.4
-```text
+```
 
 ### Step 3: Move to PATH
 
 ```bash
 sudo mv colony /usr/local/bin/
-```text
+```
 
 ## Verify Installation
 
@@ -65,7 +65,7 @@ Confirm the CLI is installed correctly:
 
 ```bash
 colony version
-```text
+```
 
 You should see output showing the Colony version information.
 
@@ -73,7 +73,7 @@ Test that the CLI is accessible from any directory:
 
 ```bash
 cd ~ && colony version
-```text
+```
 
 ## Troubleshooting
 
@@ -85,14 +85,14 @@ Check that `/usr/local/bin` is in your PATH:
 
 ```bash
 echo $PATH | grep -o '/usr/local/bin'
-```text
+```
 
 If not found, add it to your shell profile:
 
 ```bash
 echo 'export PATH="$PATH:/usr/local/bin"' >> ~/.bashrc
 source ~/.bashrc
-```text
+```
 
 ### Download Failed
 

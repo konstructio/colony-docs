@@ -37,9 +37,9 @@ Configure basic cluster settings:
 
 Enter a descriptive name for your cluster:
 
-```text
+```
 dev-k3s-cluster
-```text
+```
 
 Use lowercase, alphanumeric characters, and hyphens.
 
@@ -59,9 +59,9 @@ This configures Colony to use K3s provisioning templates.
 
 Enter your network gateway IP address:
 
-```text
+```
 192.168.1.1
-```text
+```
 
 This is the default route for all cluster nodes.
 
@@ -168,7 +168,7 @@ kubectl logs -n colony -l app=colony-agent -f
 
 # Check workflows
 kubectl get workflows -A
-```text
+```
 
 ## Verification
 
@@ -182,7 +182,7 @@ Once provisioning completes:
 
 ```bash
 export KUBECONFIG=~/.kube/k3s-config
-```text
+```
 
 ### Verify Cluster Health
 
@@ -190,16 +190,16 @@ Check all nodes are Ready:
 
 ```bash
 kubectl get nodes
-```text
+```
 
 Expected output:
 
-```text
+```
 NAME                    STATUS   ROLES                  AGE   VERSION
 control-plane-01        Ready    control-plane,master   10m   v1.28.5+k3s1
 worker-01               Ready    <none>                 8m    v1.28.5+k3s1
 worker-02               Ready    <none>                 8m    v1.28.5+k3s1
-```text
+```
 
 ### Check System Pods
 
@@ -207,7 +207,7 @@ Verify core components are running:
 
 ```bash
 kubectl get pods -A
-```text
+```
 
 Look for:
 
@@ -229,7 +229,7 @@ kubectl get storageclass
 
 # Verify CoreDNS is resolving
 kubectl run test-dns --image=busybox --rm -it --restart=Never -- nslookup kubernetes.default
-```text
+```
 
 ### Test Cluster Connectivity
 
@@ -244,7 +244,7 @@ kubectl expose deployment nginx --port=80 --type=NodePort
 
 # Get the service
 kubectl get svc nginx
-```text
+```
 
 Access the service using any node IP and the NodePort to confirm networking works.
 
@@ -272,7 +272,7 @@ sudo journalctl -u k3s -f        # on control plane
 top
 df -h
 free -h
-```text
+```
 
 :::tip
 The `kbot` user has sudo access. Use `sudo` for privileged commands.
@@ -303,7 +303,7 @@ spec:
             name: example-service
             port:
               number: 80
-```text
+```
 
 Access via NodePort or LoadBalancer (if available).
 
@@ -323,7 +323,7 @@ spec:
   resources:
     requests:
       storage: 10Gi
-```text
+```
 
 Volumes are stored in `/var/lib/rancher/k3s/storage/`.
 
@@ -411,7 +411,7 @@ kubectl expose deployment hello --port=8080 --type=LoadBalancer
 # Deploy with Helm
 helm repo add stable https://charts.helm.sh/stable
 helm install my-release stable/mysql
-```text
+```
 
 ### Configure Ingress
 
@@ -440,7 +440,7 @@ EOF
 
 # Access via NodePort
 curl -H "Host: hello.local" http://<node-ip>:<traefik-nodeport>/
-```text
+```
 
 ### Set Up Monitoring
 
@@ -454,7 +454,7 @@ helm repo update
 # Install Prometheus stack
 helm install prometheus prometheus-community/kube-prometheus-stack \
   --namespace monitoring --create-namespace
-```text
+```
 
 ### Enable Persistent Storage
 
@@ -505,7 +505,7 @@ spec:
         persistentVolumeClaim:
           claimName: postgres-data
 EOF
-```text
+```
 
 ## Learn More
 
