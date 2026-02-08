@@ -63,7 +63,7 @@ Review configuration and click **Add Nodes**.
 ### Civo Stack (Talos)
 
 - Nodes PXE boot and install Talos automatically
-- Join cluster using existing machine config
+- Join cluster using existing machine configurations
 - CSE components automatically deploy to new nodes
 - Timeline: 15-25 minutes per node
 
@@ -77,7 +77,7 @@ Review configuration and click **Add Nodes**.
 ### Talos Linux
 
 - Nodes PXE boot and install Talos automatically
-- Join cluster using existing machine config
+- Join cluster using existing machine configurations
 - Remember to install CNI if not already present
 - Timeline: 8-15 minutes per node
 

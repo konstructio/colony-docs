@@ -30,7 +30,7 @@ Check asset status in Colony UI under **Assets** tab.
 Civo Stack requires credentials for accessing private GitLab repositories and container registries. Contact your Civo account manager to obtain:
 
 - **GitLab Personal Access Token**: Access to Civo Stack repositories
-- **Image Pull Secret**: Base64-encoded Docker config for gcr.io or private registry
+- **Image Pull Secret**: Base64-encoded Docker configuration for gcr.io or private registry
 - **Civo API Token**: Authentication for Civo services
 - **Region Identifier**: Your datacenter region (e.g., `PHX1`, `NYC3`)
 
