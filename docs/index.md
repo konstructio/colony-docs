@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Learn more about Konstruct's bare metal data center product
+description: Learn More about Civo's bare metal data center product
 sidebar_position: 1
 ---
 
